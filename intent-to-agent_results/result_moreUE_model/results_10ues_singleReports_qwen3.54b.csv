@@ -1,0 +1,784 @@
+timestamp_utc,session_id,http_status,latency_ms,ollama_model,prompt_tokens,completion_tokens,total_tokens,response_size_bytes,tc_score,tc_reason,mcpu_score,mcpu_reason,actual_response
+2026-08-13T13:03:51.377038+00:00,qwen3.5:4b--1,200,85041.28,qwen3.5:4b,17745,1454,19199,8245,1.0,"The system successfully identified the total count of connected UEs and provided the specific data usage volume for each, fulfilling all requirements of the task.",1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each one to fulfill the request for per-UE data usage. The tool selection was appropriate and efficient given the available primitives.
+	The agent correctly used 'list_all_ues' to identify the UEs and then iterated through each one using 'get_latest_report' with the correct 'ue_supi' argument to retrieve the required data usage information. All tool calls were well-formed and aligned with the user's request.
+]
+","## Summary: Connected UEs Data Usage
+
+**Total UE Count:** 10 UEs
+
+**Per-UE Data Usage Volume (from most recent reports):**
+
+| SUPI | Volume (bytes) |
+|------|----------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Total Data Usage:** 11,811 bytes
+
+All 10 UEs have active reports with USAGE_REPORT or QOS_MON events, indicating they are currently connected."
+2026-08-13T13:05:43.399639+00:00,qwen3.5:4b--2,200,70653.24,qwen3.5:4b,17760,1510,19270,8181,1.0,The system successfully provided the total count of connected UEs and the specific data usage volume for each individual UE as requested.,1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each one to determine the per-UE data usage. The tools used were appropriate and necessary to fulfill the request.
+	The agent correctly used 'list_all_ues' to identify the UEs and then iteratively called 'get_latest_report' with the correct 'ue_supi' argument for each UE to retrieve the requested data usage information. All arguments were well-formed and matched the tool schemas.
+]
+","## Summary: Connected UEs Data Usage
+
+**Total UE Count:** 10
+
+**Per-UE Data Usage Volume (bytes) - Most Recent Reports:**
+
+| SUPI | Volume (bytes) |
+|------|----------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Total Data Usage:** 11,811 bytes
+
+All 10 UEs have stored reports with USAGE_REPORT or QOS_MON events, indicating active connectivity."
+2026-08-13T13:08:29.956831+00:00,qwen3.5:4b--3,200,69493.42,qwen3.5:4b,17744,1477,19221,8276,1.0,The system successfully provided both the total UE count and the specific per-UE data usage volume as requested.,1.0,"[
+	The agent correctly identified the need to list all UEs first, then systematically retrieved the latest report for each UE to calculate the requested data usage. The tools used were appropriate and necessary to fulfill the request.
+	The agent correctly used 'list_all_ues' to identify the UEs and then iterated through each one using 'get_latest_report' with the correct 'ue_supi' argument to retrieve the required data usage information. All tool calls were well-formed and aligned with the user's request.
+]
+","## Summary: Connected UEs Data Usage
+
+| Metric | Value |
+|--------|-------|
+| **Total UE Count** | 10 |
+| **Total Data Volume** | 11,811 bytes |
+
+### Per-UE Data Usage (bytes)
+
+| SUPI | Volume (bytes) |
+|------|----------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Note:** All UEs have USAGE_REPORT or QOS_MON event types with periodic reporting triggers. Data volumes range from 200 bytes (supi-user01) to 2,000 bytes (supi-user10)."
+2026-08-13T13:10:06.918863+00:00,qwen3.5:4b--4,200,70291.63,qwen3.5:4b,17713,1501,19214,8219,1.0,The system successfully provided the total count of connected UEs and the specific data usage volume for each UE as requested.,1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each to calculate the requested data usage. The tools used were appropriate and necessary for the task.
+	The agent correctly used 'list_all_ues' to identify the UEs and then iteratively called 'get_latest_report' with the correct 'ue_supi' string argument for each UE to retrieve the required data usage volume. All tool inputs were well-formed, matched the expected schema, and were appropriate for the user's request.
+]
+","## Summary: Connected UEs Data Usage
+
+**Total UE Count:** 10 UEs
+
+**Per-UE Data Usage Volume (bytes):**
+
+| UE SUPI | Total Volume (bytes) |
+|---------|---------------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Total Data Usage Volume:** 11,811 bytes
+
+All 10 UEs are currently connected with USAGE_REPORT or QOS_MON event types in their most recent reports."
+2026-08-13T13:11:46.034357+00:00,qwen3.5:4b--5,200,60465.02,qwen3.5:4b,11808,1314,13122,7968,1.0,The system successfully provided the total count of connected UEs and a detailed breakdown of data usage for each individual UE as requested.,1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each one to calculate the requested data usage. The tool selection was appropriate and exhaustive for the given task.
+	The agent correctly used 'list_all_ues' to identify the UEs and then iterated through each one using 'get_latest_report' with the correct 'ue_supi' argument to retrieve the required data. All arguments were well-formed and matched the tool definitions.
+]
+","Based on the most recent reports from all 10 connected UEs:
+
+## Summary
+
+| Metric | Value |
+|--------|-------|
+| **Total UE Count** | 10 |
+| **Total Data Volume** | 10,811 bytes |
+
+## Per-UE Data Usage Volume (bytes)
+
+| SUPI | Volume (bytes) |
+|------|----------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Total Volume Calculation:** 1654 + 1757 + 200 + 400 + 600 + 800 + 1000 + 1600 + 1800 + 2000 = **10,811 bytes**
+
+All UEs are reporting USAGE_REPORT events with periodic reporting triggers. The data shows consistent uplink/downlink patterns across UEs."
+2026-08-13T13:13:15.961929+00:00,qwen3.5:4b--6,200,68046.22,qwen3.5:4b,17735,1444,19179,8200,1.0,"The system successfully identified the total count of connected UEs and provided the specific data usage volume for each, fulfilling all requirements of the task.",1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each to determine their individual data usage. The tools used were appropriate and necessary to fulfill the request.
+	The agent correctly used 'list_all_ues' to identify the UEs and then iteratively called 'get_latest_report' with the correct 'ue_supi' argument for each UE to retrieve the requested data usage volume. All arguments were well-formed and aligned with the tool definitions.
+]
+","## Connected UE Summary
+
+**Total UE Count:** 10
+
+**Per-UE Data Usage Volume (bytes):**
+
+| SUPI | Volume (bytes) |
+|------|----------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Total Volume:** 11,811 bytes
+
+All 10 UEs have stored reports with USAGE_REPORT or QOS_MON event types, indicating active connectivity and reporting status."
+2026-08-13T13:14:52.803072+00:00,qwen3.5:4b--7,200,68323.92,qwen3.5:4b,17747,1446,19193,8193,1.0,"The system successfully identified the total count of connected UEs and provided the specific data usage volume for each, fulfilling all requirements of the task.",1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each to determine the data usage volume. The tools used were appropriate and necessary to fulfill the request.
+	The agent correctly used 'list_all_ues' to identify the UEs, followed by multiple calls to 'get_latest_report' with the correct 'ue_supi' string arguments to retrieve the required data usage volumes. All tool inputs were well-formed and aligned with the tool definitions.
+]
+","## Connected UE Summary
+
+**Total UE Count:** 10
+
+**Per-UE Data Usage Volume (bytes):**
+
+| SUPI | Volume (bytes) |
+|------|----------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Total Volume:** 11,811 bytes
+
+All 10 UEs have recent reports (USAGE_REPORT or QOS_MON event types), confirming they are connected and actively reporting."
+2026-08-13T13:17:26.661374+00:00,qwen3.5:4b--8,200,82378.78,qwen3.5:4b,17736,1795,19531,8986,1.0,The system successfully provided the total count of connected UEs and a detailed breakdown of data usage for each individual UE as requested.,0.75,"[
+	The agent successfully retrieved the required information by listing all UEs and then calling 'get_latest_report' for each one. While this approach was effective, it was inefficient; the agent made 10 individual calls to 'get_latest_report' instead of potentially using a more batch-oriented approach if one existed, or simply acknowledging that the task required iterating through the list. The tool selection was appropriate, but the execution strategy was somewhat verbose.
+	The agent correctly used 'list_all_ues' to identify the UEs and then iterated through each one using 'get_latest_report' with the correct 'ue_supi' argument to retrieve the requested data usage volume. All arguments were well-formed and aligned with the tool definitions.
+]
+","## Summary: Connected UEs Data Usage
+
+| Metric | Value |
+|--------|-------|
+| **Total UE Count** | 10 |
+| **Total Data Usage** | 11,811 bytes |
+
+### Per-UE Data Usage Volume (Most Recent Reports)
+
+| SUPI | Volume (bytes) | Event Type | Timestamp |
+|------|----------------|------------|------------|
+| imsi-001010000000001 | 1,654 | QOS_MON | 2026-06-03T16:03:48 |
+| imsi-001010000000002 | 1,757 | QOS_MON | 2026-06-03T16:03:42 |
+| supi-user01 | 200 | USAGE_REPORT | 2026-08-13T09:27:00 |
+| supi-user02 | 400 | USAGE_REPORT | 2026-08-13T09:27:00 |
+| supi-user03 | 600 | USAGE_REPORT | 2026-08-13T09:27:00 |
+| supi-user04 | 800 | USAGE_REPORT | 2026-08-13T09:27:00 |
+| supi-user05 | 1,000 | USAGE_REPORT | 2026-08-13T09:27:00 |
+| supi-user08 | 1,600 | USAGE_REPORT | 2026-08-13T09:28:40 |
+| supi-user09 | 1,800 | USAGE_REPORT | 2026-08-13T09:28:40 |
+| supi-user10 | 2,000 | USAGE_REPORT | 2026-08-13T09:28:40 |
+
+**All 10 UEs are connected** with stored usage reports. Two UEs (imsi-001010000000001, imsi-001010000000002) have QOS_MON events, while the remaining 8 have USAGE_REPORT events."
+2026-08-13T13:19:15.208980+00:00,qwen3.5:4b--9,200,68263.88,qwen3.5:4b,17728,1450,19178,8136,1.0,The system successfully provided the total count of connected UEs and a detailed breakdown of data usage for each individual UE as requested.,1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each one to calculate the requested data usage. The tools used were appropriate and necessary to fulfill the request.
+	The agent correctly used 'list_all_ues' to identify the UEs, followed by 'get_latest_report' for each identified UE with the correct 'ue_supi' argument. The inputs were well-formed, matched the expected schema, and were appropriate for the task.
+]
+","## Summary: Connected UEs Data Usage
+
+**Total UE Count:** 10
+
+**Total Data Usage Volume:** 11,811 bytes
+
+### Per-UE Data Usage (bytes)
+
+| SUPI | Volume (bytes) |
+|------|----------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Highest usage:** supi-user10 (2,000 bytes)  
+**Lowest usage:** supi-user01 (200 bytes)"
+2026-08-13T13:20:47.177004+00:00,qwen3.5:4b--10,200,70060.26,qwen3.5:4b,17748,1488,19236,8251,1.0,The system successfully provided both the total UE count and the specific per-UE data usage volume as requested.,1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each one to calculate the requested data usage. The tools used were appropriate and necessary to fulfill the request.
+	The agent correctly used 'list_all_ues' to identify the UEs and then iterated through each one using 'get_latest_report' with the correct 'ue_supi' argument to retrieve the required data usage volume. All arguments were well-formed and matched the tool definitions.
+]
+","## Summary: Connected UEs Data Usage
+
+| Metric | Value |
+|--------|-------|
+| **Total UE Count** | 10 |
+| **Total Data Volume** | 11,811 bytes |
+
+### Per-UE Data Usage (bytes)
+
+| SUPI | Volume (bytes) |
+|------|----------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Note:** All UEs have USAGE_REPORT or QOS_MON event types with periodic reporting triggers. Data volumes range from 200 bytes (supi-user01) to 2,000 bytes (supi-user10)."
+2026-08-13T13:22:20.643116+00:00,qwen3.5:4b--11,200,67304.84,qwen3.5:4b,17765,1426,19191,8211,1.0,The system successfully provided the total count of connected UEs and a detailed breakdown of data usage for each individual UE as requested.,1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each one to fulfill the request for per-UE data usage. The tools used were appropriate and necessary to gather the required information.
+	The agent correctly used 'list_all_ues' to identify the UEs, then iterated through each UE using 'get_latest_report' with the correct 'ue_supi' argument to retrieve the required data usage information. All tool inputs were well-formed, matched the expected schema, and were appropriate for the task.
+]
+","## Summary: Connected UEs Data Usage
+
+**Total UE Count:** 10
+
+**Total Data Usage Volume:** 11,811 bytes
+
+### Per-UE Data Usage (bytes)
+
+| SUPI | Volume (bytes) |
+|------|----------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Highest usage:** supi-user10 (2,000 bytes)  
+**Lowest usage:** supi-user01 (200 bytes)"
+2026-08-13T13:23:49.295227+00:00,qwen3.5:4b--12,200,71147.36,qwen3.5:4b,17701,1525,19226,8184,1.0,"The system successfully identified the total number of connected UEs and provided the specific data usage volume for each, fulfilling all requirements of the task.",1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each to determine the per-UE data usage. The tools used were appropriate and necessary to fulfill the request.
+	The agent correctly used 'list_all_ues' to identify the UEs and then iterated through each one using 'get_latest_report' with the correct 'ue_supi' argument to retrieve the required data usage volume. All tool inputs were well-formed and aligned with the tool definitions and the user's request.
+]
+","## Connected UE Summary
+
+**Total UE Count:** 10
+
+**Per-UE Data Usage Volume (bytes):**
+
+| SUPI | Volume (bytes) |
+|------|----------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Total Volume:** 11,811 bytes
+
+All 10 UEs have stored USAGE_REPORT or QOS_MON reports, indicating active connectivity."
+2026-08-13T13:25:30.985011+00:00,qwen3.5:4b--13,200,69074.28,qwen3.5:4b,17743,1468,19211,8163,1.0,The system successfully provided the total count of connected UEs and the data usage volume per UE as requested.,1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each to determine individual data usage. The tools used were appropriate and necessary to fulfill the request.
+	The agent correctly used 'list_all_ues' to identify the UEs and then iteratively called 'get_latest_report' with the correct 'ue_supi' string argument for each UE to retrieve the required data usage volume. All tool inputs were well-formed, matched the expected schema, and were appropriate for the user's request.
+]
+","## Connected UE Summary (Most Recent Reports)
+
+| UE SUPI | Total Volume (bytes) |
+|---------|---------------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Total UE Count:** 10  
+**Total Data Usage:** 11,811 bytes
+
+All 10 UEs have stored reports with USAGE_REPORT or QOS_MON events, indicating active connectivity."
+2026-08-13T13:27:07.723525+00:00,qwen3.5:4b--14,200,69718.04,qwen3.5:4b,17749,1479,19228,8315,1.0,The system successfully provided both the total UE count and the specific per-UE data usage volume as requested.,1.0,"[
+	The agent correctly identified the need to list all UEs first, then retrieved the latest report for each individual UE to calculate the requested data usage. This was the most accurate way to fulfill the request given the available tools.
+	The agent correctly used 'list_all_ues' to identify the UEs, 'get_statistics' to verify the count, and 'get_latest_report' with the appropriate 'ue_supi' string arguments for each identified UE to retrieve the required data usage volumes. All inputs were well-formed and aligned with the tool definitions.
+]
+","## Summary: Connected UEs Data Usage
+
+| Metric | Value |
+|--------|-------|
+| **Total UE Count** | 10 |
+| **Total Data Usage** | 11,811 bytes |
+
+### Per-UE Data Usage (bytes)
+
+| SUPI | Volume (bytes) |
+|------|----------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Note:** All UEs have USAGE_REPORT or QOS_MON event types with periodic reporting triggers. Data volumes range from 200 bytes (supi-user01) to 2,000 bytes (supi-user10)."
+2026-08-13T13:28:44.568929+00:00,qwen3.5:4b--15,200,68073.53,qwen3.5:4b,17767,1444,19211,8148,1.0,The system successfully provided the total count of connected UEs and the specific data usage volume for each UE as requested.,1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each to determine individual data usage. The tools used were appropriate and necessary to fulfill the request.
+	The agent correctly used 'list_all_ues' to identify the UEs and then appropriately called 'get_latest_report' for each identified UE using the correct 'ue_supi' string argument. All tool inputs were well-formed, matched the expected schema, and were sufficient to fulfill the user's request.
+]
+","## Summary: Connected UEs Data Usage
+
+| UE SUPI | Total Volume (bytes) |
+|---------|----------------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Total UE Count:** 10  
+**Total Data Volume:** 11,811 bytes
+
+All 10 UEs have stored reports with USAGE_REPORT or QOS_MON events, indicating active connectivity."
+2026-08-13T13:30:18.793225+00:00,qwen3.5:4b--16,200,69210.06,qwen3.5:4b,17739,1469,19208,8500,1.0,"The system successfully provided the total count of connected UEs and the individual data usage for each, fulfilling all requirements of the task.",0.75,"[
+	The agent successfully retrieved the required information by listing all UEs and then querying the latest report for each one. While this approach was effective, it was inefficient; the agent could have used 'get_ue_count' to get the total count directly instead of inferring it from the list, and the toolset lacked a bulk reporting tool, making the iterative 'get_latest_report' calls necessary but tedious.
+	The agent correctly used 'list_all_ues' to identify the UEs and then iteratively called 'get_latest_report' with the correct 'ue_supi' string argument for each identified UE. The inputs were well-formed, matched the expected schema, and were appropriate for the task of retrieving data usage per UE.
+]
+","## Connected UEs Summary
+
+**Total UE Count:** 10
+
+| SUPI | Event Type | Volume (bytes) |
+|------|------------|----------------|
+| imsi-001010000000001 | QOS_MON | 1,654 |
+| imsi-001010000000002 | QOS_MON | 1,757 |
+| supi-user01 | USAGE_REPORT | 200 |
+| supi-user02 | USAGE_REPORT | 400 |
+| supi-user03 | USAGE_REPORT | 600 |
+| supi-user04 | USAGE_REPORT | 800 |
+| supi-user05 | USAGE_REPORT | 1,000 |
+| supi-user08 | USAGE_REPORT | 1,600 |
+| supi-user09 | USAGE_REPORT | 1,800 |
+| supi-user10 | USAGE_REPORT | 2,000 |
+
+**Total Data Usage Volume:** 11,811 bytes
+
+All 10 UEs are connected and reporting (USAGE_REPORT or QOS_MON event types)."
+2026-08-13T13:31:57.634143+00:00,qwen3.5:4b--17,200,68153.29,qwen3.5:4b,17711,1440,19151,8150,1.0,The system successfully provided the total count of connected UEs and the individual data usage for each UE as requested.,1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each to determine the data usage. The tools used were appropriate and necessary to fulfill the request.
+	The agent correctly used 'list_all_ues' to identify the UEs and then iterated through each one using 'get_latest_report' with the correct 'ue_supi' argument to retrieve the required data usage information. All tool calls were well-formed and aligned with the user's request.
+]
+","## Connected UE Data Usage Summary
+
+**Total UE Count:** 10 UEs
+
+**Per-UE Data Usage Volume (bytes):**
+
+| SUPI | Total Volume (bytes) |
+|------|----------------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Total Data Usage:** 11,811 bytes
+
+*Note: All reports are from USAGE_REPORT or QOS_MON events with Periodic Reporting trigger.*"
+2026-08-13T13:33:30.356172+00:00,qwen3.5:4b--18,200,58517.87,qwen3.5:4b,11800,1270,13070,7854,1.0,The system successfully provided the total count of connected UEs and the specific data usage for each individual UE as requested.,1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each one to calculate the requested data usage. The tools used were appropriate and necessary to fulfill the request.
+	The agent correctly used 'list_all_ues' to identify the UEs, 'get_statistics' to verify the count, and 'get_latest_report' with the correct 'ue_supi' argument for each identified UE to retrieve the required data usage volumes. All arguments were well-formed and aligned with the tool definitions.
+]
+","Based on the most recent reports from all 10 connected UEs:
+
+## Summary
+
+| Metric | Value |
+|--------|-------|
+| **Total UE Count** | 10 |
+| **Total Data Volume** | 10,811 bytes |
+
+## Per-UE Data Usage Volume (bytes)
+
+| SUPI | Volume (bytes) |
+|------|----------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Statistics:**
+- Mean: 1,081 bytes/UE
+- Max: 2,000 bytes (supi-user10)
+- Min: 200 bytes (supi-user01)"
+2026-08-13T13:34:51.538578+00:00,qwen3.5:4b--19,200,67152.37,qwen3.5:4b,17749,1421,19170,8133,1.0,The system successfully provided the total count of connected UEs and the specific data usage volume for each individual UE as requested.,1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each one to determine the data usage. The tools used were appropriate and necessary to fulfill the request.
+	The agent correctly used 'list_all_ues' to identify the UEs, followed by 'get_latest_report' for each identified UE with the correct 'ue_supi' argument. The inputs were well-formed, matched the expected schema, and were appropriate for fulfilling the user's request.
+]
+","## Connected UE Summary
+
+**Total UE Count:** 10
+
+**Per-UE Data Usage Volume (bytes):**
+
+| SUPI | Volume (bytes) |
+|------|----------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Total Data Usage:** 11,811 bytes
+
+All UEs are reporting via periodic QOS_MON/USAGE_REPORT triggers with 10-second durations."
+2026-08-13T13:36:25.498792+00:00,qwen3.5:4b--20,200,67207.78,qwen3.5:4b,17739,1431,19170,8134,1.0,"The system successfully identified the total count of connected UEs and provided the specific data usage volume for each, fulfilling all requirements of the task.",1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each one to calculate the requested data usage. The tools used were appropriate and necessary to fulfill the request.
+	The agent correctly used 'list_all_ues' to identify the UEs and then iteratively called 'get_latest_report' with the correct 'ue_supi' argument for each UE to retrieve the required data usage information. All arguments were well-formed and matched the tool schemas.
+]
+","## Summary: Connected UEs Data Usage
+
+| UE SUPI | Total Volume (bytes) |
+|---------|----------------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Total UE Count:** 10  
+**Total Data Usage Volume:** 11,811 bytes
+
+All 10 UEs have recent reports indicating active connectivity."
+2026-08-13T13:37:58.692004+00:00,qwen3.5:4b--21,200,68609.29,qwen3.5:4b,17729,1460,19189,8193,1.0,The system successfully provided the total count of connected UEs and the data usage volume per UE as requested.,1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each one to calculate the requested data usage. The tools used were appropriate and necessary to fulfill the request.
+	The agent correctly used 'list_all_ues' to identify the UEs and then iteratively called 'get_latest_report' with the correct 'ue_supi' argument for each UE to retrieve the required data usage information. All arguments were well-formed and matched the tool definitions.
+]
+","## Summary: Connected UEs Data Usage
+
+| UE SUPI | Total Volume (bytes) |
+|---------|----------------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Total UE count:** 10  
+**Total data usage volume:** 11,811 bytes
+
+All 10 UEs have stored reports and are considered connected. The most recent reports show USAGE_REPORT events (except for the first two UEs which have QOS_MON events)."
+2026-08-13T13:39:26.671256+00:00,qwen3.5:4b--22,200,78826.37,qwen3.5:4b,17720,1708,19428,8490,1.0,The system successfully provided the total count of connected UEs and the specific data usage volume for each individual UE as requested.,1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each one to fulfill the request for per-UE data usage. The tools used were appropriate and necessary for the task.
+	The agent correctly used 'list_all_ues' to identify the UEs, followed by 'get_latest_report' for each identified UE with the correct 'ue_supi' argument. The arguments were well-formed, matched the expected schema, and were appropriate for the task of retrieving per-UE data usage.
+]
+","## Summary: Connected UEs Data Usage
+
+| Metric | Value |
+|--------|-------|
+| **Total UE Count** | 10 |
+| **Total Data Usage** | 11,811 bytes |
+
+### Per-UE Data Usage (Most Recent Reports)
+
+| SUPI | Volume (bytes) | Timestamp |
+|------|----------------|-----------|
+| imsi-001010000000001 | 1,654 | 2026-06-03T16:03:48 |
+| imsi-001010000000002 | 1,757 | 2026-06-03T16:03:42 |
+| supi-user01 | 200 | 2026-08-13T09:27:00 |
+| supi-user02 | 400 | 2026-08-13T09:27:00 |
+| supi-user03 | 600 | 2026-08-13T09:27:00 |
+| supi-user04 | 800 | 2026-08-13T09:27:00 |
+| supi-user05 | 1,000 | 2026-08-13T09:27:00 |
+| supi-user08 | 1,600 | 2026-08-13T09:28:40 |
+| supi-user09 | 1,800 | 2026-08-13T09:28:40 |
+| supi-user10 | 2,000 | 2026-08-13T09:28:40 |
+
+**Note**: All 10 UEs have active reports (USAGE_REPORT or QOS_MON events), indicating they are currently connected."
+2026-08-13T13:41:15.799642+00:00,qwen3.5:4b--23,200,80242.45,qwen3.5:4b,17714,1741,19455,8659,1.0,The system successfully provided both the total UE count and the per-UE data usage volume as requested.,1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each one to fulfill the request for per-UE data usage. The tool selection was appropriate and exhaustive for the given task.
+	The agent correctly used 'list_all_ues' to identify the UEs, followed by multiple calls to 'get_latest_report' with the correct 'ue_supi' argument for each UE identified. The arguments provided were well-formed, of the correct type, and fully aligned with the user's request to retrieve data usage for each connected UE.
+]
+","## Summary: Connected UEs Data Usage
+
+| Metric | Value |
+|--------|-------|
+| **Total UE Count** | 10 |
+| **Total Data Usage** | 11,811 bytes |
+
+### Per-UE Data Usage Volume (Most Recent Reports)
+
+| SUPI | Volume (bytes) | Event Type | Timestamp |
+|------|----------------|------------|------------|
+| imsi-001010000000001 | 1,654 | QOS_MON | 2026-06-03T16:03:48 |
+| imsi-001010000000002 | 1,757 | QOS_MON | 2026-06-03T16:03:42 |
+| supi-user01 | 200 | USAGE_REPORT | 2026-08-13T09:27:00 |
+| supi-user02 | 400 | USAGE_REPORT | 2026-08-13T09:27:00 |
+| supi-user03 | 600 | USAGE_REPORT | 2026-08-13T09:27:00 |
+| supi-user04 | 800 | USAGE_REPORT | 2026-08-13T09:27:00 |
+| supi-user05 | 1,000 | USAGE_REPORT | 2026-08-13T09:27:00 |
+| supi-user08 | 1,600 | USAGE_REPORT | 2026-08-13T09:28:40 |
+| supi-user09 | 1,800 | USAGE_REPORT | 2026-08-13T09:28:40 |
+| supi-user10 | 2,000 | USAGE_REPORT | 2026-08-13T09:28:40 |
+
+**Note:** All 10 UEs have stored reports and appear to be connected (active reporting events)."
+2026-08-13T13:43:03.275419+00:00,qwen3.5:4b--24,200,73729.67,qwen3.5:4b,17720,1580,19300,8269,1.0,The system successfully provided the total count of connected UEs and the specific data usage volume for each individual UE as requested.,1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each one to determine the per-UE data usage. The tools used were appropriate and necessary to fulfill the request.
+	The agent correctly used 'list_all_ues' to identify the UEs and then appropriately called 'get_latest_report' for each identified UE using the correct 'ue_supi' argument. The inputs were well-formed, matched the expected schema, and were sufficient to fulfill the user's request.
+]
+","## Summary: Connected UEs Data Usage
+
+| Metric | Value |
+|--------|-------|
+| **Total UE Count** | 10 |
+| **Total Data Volume** | 11,811 bytes |
+
+### Per-UE Data Usage (Most Recent Reports)
+
+| SUPI | Volume (bytes) |
+|------|----------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+All 10 UEs have stored reports and are considered connected. Data volumes range from 200 bytes (supi-user01) to 2,000 bytes (supi-user10)."
+2026-08-13T13:44:43.114223+00:00,qwen3.5:4b--25,200,67995.34,qwen3.5:4b,17758,1444,19202,8190,1.0,"The system successfully identified the total number of connected UEs and provided the specific data usage volume for each, fulfilling all requirements of the task.",1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each one to fulfill the request for per-UE data usage. The tools used were appropriate and necessary for the task.
+	The agent correctly used 'list_all_ues' to identify the UEs and then iteratively called 'get_latest_report' with the correct 'ue_supi' argument for each UE identified. The arguments provided were well-formed, matched the expected schema, and were appropriate for the task.
+]
+","## Summary: Connected UEs Data Usage
+
+**Total UE Count:** 10
+
+**Per-UE Data Usage Volume (bytes) from most recent reports:**
+
+| SUPI | Volume (bytes) |
+|------|----------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Total Data Usage:** 11,811 bytes
+
+All 10 UEs have recent reports indicating they are currently connected."
+2026-08-13T13:46:13.482113+00:00,qwen3.5:4b--26,200,67929.14,qwen3.5:4b,17751,1441,19192,8360,1.0,"The system successfully identified the total count of connected UEs and provided the specific data usage volume for each, fulfilling all requirements of the task.",0.75,"[
+	The agent successfully retrieved the required information by listing all UEs and then fetching the latest report for each. However, the agent unnecessarily called 'get_statistics' which was not needed for the specific request, and it could have potentially used 'get_ue_count' instead of relying on the list length from 'list_all_ues' to be more efficient.
+	The agent correctly used 'list_all_ues' to identify the UEs and then iteratively called 'get_latest_report' with the correct 'ue_supi' argument for each UE to retrieve the required data usage information. The arguments provided were well-formed, matched the expected schema, and were appropriate for the user's request.
+]
+","## Summary: Connected UEs Data Usage
+
+**Total UE Count:** 10
+
+**Per-UE Data Usage Volume (bytes):**
+
+| SUPI | Total Volume (bytes) |
+|------|----------------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Total Data Usage:** 11,811 bytes
+
+All 10 UEs have recent reports and are considered connected."
+2026-08-13T13:47:46.416012+00:00,qwen3.5:4b--27,200,79195.39,qwen3.5:4b,17738,1727,19465,8642,1.0,"The system successfully identified the total count of connected UEs and provided the specific data usage for each, fulfilling all requirements of the task.",1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each one to fulfill the request for per-UE data usage. The tools used were appropriate and necessary for the task.
+	The agent correctly used 'list_all_ues' to identify the UEs and then iteratively called 'get_latest_report' with the correct 'ue_supi' argument for each UE identified. All arguments were well-formed, of the correct type, and aligned with the tool definitions and the user's request.
+]
+","## Summary: Connected UEs Data Usage
+
+**Total UE Count:** 10 UEs
+
+**Per-UE Data Usage Volume (bytes) from most recent report:**
+
+| SUPI | Total Volume (bytes) | Event Type | Timestamp |
+|------|---------------------|------------|-----------|
+| imsi-001010000000001 | 1,654 | QOS_MON | 2026-06-03T16:03:48 |
+| imsi-001010000000002 | 1,757 | QOS_MON | 2026-06-03T16:03:42 |
+| supi-user01 | 200 | USAGE_REPORT | 2026-08-13T09:27:00 |
+| supi-user02 | 400 | USAGE_REPORT | 2026-08-13T09:27:00 |
+| supi-user03 | 600 | USAGE_REPORT | 2026-08-13T09:27:00 |
+| supi-user04 | 800 | USAGE_REPORT | 2026-08-13T09:27:00 |
+| supi-user05 | 1,000 | USAGE_REPORT | 2026-08-13T09:27:00 |
+| supi-user08 | 1,600 | USAGE_REPORT | 2026-08-13T09:28:40 |
+| supi-user09 | 1,800 | USAGE_REPORT | 2026-08-13T09:28:40 |
+| supi-user10 | 2,000 | USAGE_REPORT | 2026-08-13T09:28:40 |
+
+**Total Data Usage:** 11,811 bytes
+
+All 10 UEs have stored reports and appear to be connected (active QOS_MON or USAGE_REPORT events)."
+2026-08-13T13:49:25.736316+00:00,qwen3.5:4b--28,200,69503.51,qwen3.5:4b,17726,1489,19215,8189,1.0,The system successfully provided the total count of connected UEs and the specific data usage volume for each one as requested.,1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each one to fulfill the request for per-UE data usage. The tools used were appropriate and necessary given the available primitives.
+	The agent correctly used 'list_all_ues' to identify the UEs and then appropriately called 'get_latest_report' for each identified UE using the correct 'ue_supi' argument. The inputs were well-formed, matched the expected schema, and were sufficient to fulfill the user's request.
+]
+","## Summary: Connected UEs Data Usage (Most Recent Reports)
+
+| UE SUPI | Total Volume (bytes) |
+|---------|----------------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Total UE Count:** 10  
+**Total Data Usage:** 11,811 bytes
+
+*Note: Reports span from 2026-06-03 to 2026-08-13, with most recent timestamps at 2026-08-13T09:28:40+00:00.*"
+2026-08-13T13:50:58.561246+00:00,qwen3.5:4b--29,200,67895.41,qwen3.5:4b,17735,1450,19185,8200,1.0,"The system successfully identified the total count of connected UEs and provided the specific data usage for each, fulfilling all requirements of the task.",1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each one to fulfill the request for per-UE data usage. The tools used were appropriate and necessary for the task.
+	The agent correctly used 'list_all_ues' to identify the UEs and then iterated through each one using 'get_latest_report' with the correct 'ue_supi' argument to retrieve the required data usage volume. All tool inputs were well-formed and aligned with the tool definitions.
+]
+","## Summary: Connected UEs Data Usage
+
+**Total UE Count:** 10 UEs with stored reports
+
+**Per-UE Data Usage Volume (from most recent reports):**
+
+| SUPI | Volume (bytes) |
+|------|----------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Total Data Usage:** 11,811 bytes
+
+All 10 UEs have recent reports indicating they are currently connected."
+2026-08-13T13:52:28.916309+00:00,qwen3.5:4b--30,200,68109.06,qwen3.5:4b,17758,1450,19208,8231,1.0,"The system successfully identified the total count of connected UEs and provided the specific data usage volume for each, fulfilling all requirements of the task.",1.0,"[
+	The agent correctly identified the need to list all UEs and then retrieve the latest report for each one to calculate the requested data usage. The tools used were appropriate and necessary to fulfill the request.
+	The agent correctly used 'list_all_ues' to identify the UEs and then iteratively called 'get_latest_report' with the correct 'ue_supi' argument for each UE to retrieve the required data usage volume. All tool inputs were well-formed, matched the expected schema, and were appropriate for the user's request.
+]
+","## Connected UEs Summary
+
+**Total UE Count:** 10 UEs
+
+**Per-UE Data Usage Volume (bytes):**
+
+| SUPI | Volume (bytes) |
+|------|----------------|
+| imsi-001010000000001 | 1,654 |
+| imsi-001010000000002 | 1,757 |
+| supi-user01 | 200 |
+| supi-user02 | 400 |
+| supi-user03 | 600 |
+| supi-user04 | 800 |
+| supi-user05 | 1,000 |
+| supi-user08 | 1,600 |
+| supi-user09 | 1,800 |
+| supi-user10 | 2,000 |
+
+**Total Volume:** 11,811 bytes
+
+All 10 UEs have stored reports and are considered connected based on their USAGE_REPORT or QOS_MON event types."

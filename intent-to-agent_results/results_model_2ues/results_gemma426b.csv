@@ -1,0 +1,151 @@
+timestamp_utc,session_id,http_status,latency_ms,ollama_model,prompt_tokens,completion_tokens,total_tokens,response_size_bytes,tc_score,tc_reason,mcpu_score,mcpu_reason
+2026-06-05T07:32:34.732730+00:00,gemma4:26b--1,200,70588.2,gemma4:26b,9915,235,10150,3997,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to count the UEs and then retrieve the specific usage reports for each one. It used 'get_ue_count' to get the total, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' for each UE to obtain the usage volume, which was the most direct and accurate way to fulfill the request.
+	The agent correctly used 'get_ue_count' to retrieve the number of UEs, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' with the correct 'ue_supi' arguments to fetch the usage volumes for each UE. All tool calls were well-formed and aligned with the user's request.
+]
+"
+2026-06-05T07:33:50.792606+00:00,gemma4:26b--2,200,26667.34,gemma4:26b,9913,235,10148,4009,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to get the UE count and then retrieve the latest usage reports for each individual UE. It used the appropriate tools (get_ue_count, list_all_ues, and get_latest_report) to gather all the necessary information to answer the user's request completely.
+	The agent correctly used the available tools to fulfill the user's request. It used 'get_ue_count' to find the number of UEs, 'list_all_ues' to identify them, and 'get_latest_report' with the correct 'ue_supi' arguments for each identified UE to retrieve their usage volumes. All arguments were well-formed and matched the tool definitions.
+]
+"
+2026-06-05T07:34:22.888671+00:00,gemma4:26b--3,200,25479.29,gemma4:26b,9915,199,10114,4018,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to count the UEs and retrieve their individual reports. It used 'get_ue_count' to get the total, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' for each UE to obtain the usage volume, which is the most accurate and logical sequence of tool calls given the available primitives.
+	The agent correctly used the available tools to fulfill the user's request. It used 'get_ue_count' to find the number of UEs, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' with the correct 'ue_supi' string arguments for each identified UE to retrieve the usage volumes. All arguments were well-formed and matched the tool definitions.
+]
+"
+2026-06-05T07:34:53.886375+00:00,gemma4:26b--4,200,26125.3,gemma4:26b,9909,199,10108,3918,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to count the UEs and retrieve their individual usage reports. It used 'get_ue_count' to get the total, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' for each UE to obtain the usage volume, which was the most accurate way to fulfill the request given the available tools.
+	The agent correctly used 'get_ue_count' to determine the number of UEs, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' with the correct 'ue_supi' string arguments to retrieve the usage volume for each UE, fully satisfying the user's request.
+]
+"
+2026-06-05T07:35:25.513079+00:00,gemma4:26b--5,200,26636.95,gemma4:26b,9899,199,10098,4034,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to count the UEs and retrieve their individual reports. It used 'get_ue_count' to get the total, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' for each UE to obtain the usage volume, which was the most direct and accurate way to fulfill the request given the available tools.
+	The agent correctly used the available tools to fulfill the user's request. It used 'get_ue_count' to find the number of UEs, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' with the correct 'ue_supi' argument for each identified UE to retrieve the usage volume. All arguments provided were valid, correctly typed, and aligned with the tool definitions.
+]
+"
+2026-06-05T07:35:57.628172+00:00,gemma4:26b--6,200,25020.33,gemma4:26b,9907,199,10106,4035,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to get the UE count and then retrieve the specific usage reports for each UE. It used 'get_ue_count' to answer the first part of the request, 'list_all_ues' to identify the relevant UEs, and 'get_latest_report' for each UE to obtain the usage volume, which was the most efficient and accurate way to fulfill the request given the available tools.
+	The agent correctly used the available tools to fulfill the user's request. It used 'get_ue_count' to find the number of UEs, 'list_all_ues' to identify them, and 'get_latest_report' with the correct 'ue_supi' arguments to retrieve the usage volumes for each UE. All arguments were well-formed and matched the tool definitions.
+]
+"
+2026-06-05T07:36:28.328985+00:00,gemma4:26b--7,200,26672.49,gemma4:26b,9912,235,10147,3889,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to get the UE count and then retrieve the latest reports for each individual UE to fulfill the request. The tools used were appropriate and necessary to gather the required information.
+	The agent correctly used 'get_ue_count' to retrieve the number of UEs, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' with the correct 'ue_supi' arguments to fetch the usage volume for each UE. All tool calls were well-formed and aligned with the user's request.
+]
+"
+2026-06-05T07:37:00.679178+00:00,gemma4:26b--8,200,25113.93,gemma4:26b,9910,199,10109,3966,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to get the UE count and then retrieve the latest report for each individual UE to determine their usage volume. The tools used (get_ue_count, list_all_ues, and get_latest_report) were the most appropriate and direct way to fulfill the user's request.
+	The agent correctly used the available tools to fulfill the user's request. It used 'get_ue_count' to find the number of UEs, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' with the correct 'ue_supi' string arguments to retrieve the usage volume for each UE. All arguments provided were well-formed and matched the tool definitions.
+]
+"
+2026-06-05T07:37:31.216052+00:00,gemma4:26b--9,200,25459.74,gemma4:26b,9901,199,10100,4025,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to count the UEs and retrieve their individual reports. It used 'get_ue_count' to get the total, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' for each UE to obtain the usage volume, which was the most logical and efficient way to fulfill the request given the available tools.
+	The agent correctly used the available tools to fulfill the user's request. It used 'get_ue_count' to find the number of UEs, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' with the correct 'ue_supi' argument for each UE to retrieve the usage volume. All arguments provided were valid, correctly typed, and aligned with the tool definitions.
+]
+"
+2026-06-05T07:38:02.044607+00:00,gemma4:26b--10,200,25331.74,gemma4:26b,9910,199,10109,3966,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to count the UEs and retrieve their individual reports. It used 'get_ue_count' to get the total, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' for each UE to obtain the usage volume, which is the most accurate and logical sequence of tools available to fulfill the request.
+	The agent correctly used 'get_ue_count' to determine the number of UEs, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' with the correct 'ue_supi' string arguments for each identified UE to retrieve the usage volume. All tool calls were well-formed and aligned with the user's request.
+]
+"
+2026-06-05T07:38:32.949405+00:00,gemma4:26b--11,200,25241.73,gemma4:26b,9915,199,10114,3948,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to count the UEs and retrieve their individual reports. It used 'get_ue_count' to get the total, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' for each UE to obtain the usage volume, which was the most logical and efficient way to fulfill the request given the available tools.
+	The agent correctly used 'get_ue_count' to retrieve the number of UEs, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' with the correct 'ue_supi' arguments to fetch the usage volume for each UE. All tool calls were well-formed and aligned with the user's request.
+]
+"
+2026-06-05T07:39:03.635405+00:00,gemma4:26b--12,200,26410.41,gemma4:26b,9911,235,10146,4025,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to count the UEs and retrieve their individual reports. It used 'get_ue_count' to get the total, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' for each UE to obtain the usage volume, which is the most direct and accurate way to fulfill the request given the available tools.
+	The agent correctly used 'get_ue_count' to retrieve the number of UEs, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' with the correct 'ue_supi' string arguments for each identified UE to retrieve the usage volumes. All tool calls were well-formed and aligned with the user's request.
+]
+"
+2026-06-05T07:39:35.566060+00:00,gemma4:26b--13,200,35202.24,gemma4:26b,9898,198,10096,3977,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to count the UEs and retrieve their individual reports. It used 'get_ue_count' to get the total, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' for each UE to obtain the usage volume, which is the most accurate and logical sequence of tools available.
+	The agent correctly used the available tools to fulfill the user's request. It used 'get_ue_count' to find the number of UEs, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' with the correct 'ue_supi' string arguments to retrieve the usage volume for each UE. All arguments provided were well-formed and matched the tool schemas.
+]
+"
+2026-06-05T07:40:16.214115+00:00,gemma4:26b--14,200,27866.99,gemma4:26b,9910,235,10145,3962,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to count the UEs and retrieve individual reports for each. It used 'get_ue_count' to get the total, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' for each UE to obtain the usage volume, which directly fulfills the user's request.
+	The agent correctly used 'get_ue_count' to determine the number of UEs, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' with the correct 'ue_supi' arguments to retrieve the usage volume for each UE. All tool calls were well-formed and aligned with the user's request.
+]
+"
+2026-06-05T07:40:49.519353+00:00,gemma4:26b--15,200,26887.4,gemma4:26b,9927,196,10123,3934,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volumes for each as requested.,1.0,"[
+	The agent correctly identified the need to get the UE count and then list the UEs to retrieve their individual reports. Using 'get_ue_count', 'list_all_ues', and 'get_latest_report' for each identified UE was the most logical and complete way to fulfill the request given the available tools.
+	The agent correctly used the available tools to fulfill the user's request. It used 'get_ue_count' to determine the number of UEs, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' with the correct 'ue_supi' string arguments to retrieve the usage volume for each UE. All arguments were well-formed and matched the tool schemas.
+]
+"
+2026-06-05T07:41:21.811644+00:00,gemma4:26b--16,200,26616.37,gemma4:26b,9924,235,10159,3923,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to count the UEs, list them to identify their IDs, and then retrieve the latest report for each specific UE to get the usage volume. The tools used were appropriate and necessary to fulfill the request.
+	The agent correctly used 'get_ue_count' to retrieve the number of UEs, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' with the correct 'ue_supi' arguments for each identified UE to retrieve the usage volumes. All tool calls were well-formed and aligned with the user's request.
+]
+"
+2026-06-05T07:41:53.971180+00:00,gemma4:26b--17,200,25440.74,gemma4:26b,9908,196,10104,3774,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to count the UEs, list them to identify their IDs, and then retrieve the latest report for each specific UE to get the usage volume. The tools used were appropriate and necessary to fulfill the request.
+	The agent correctly used 'get_ue_count' and 'list_all_ues' with no arguments as required, and correctly used 'get_latest_report' with the appropriate 'ue_supi' string arguments for each UE identified, fully satisfying the user's request.
+]
+"
+2026-06-05T07:42:24.845700+00:00,gemma4:26b--18,200,26147.49,gemma4:26b,9909,235,10144,4077,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to count the UEs and retrieve their individual reports. It used 'get_ue_count' to get the total, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' for each UE to obtain the usage volume, which was the most accurate and logical sequence of tool calls given the available primitives.
+	The agent correctly used the available tools to fulfill the user's request. It used 'get_ue_count' to find the number of UEs, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' with the correct 'ue_supi' arguments to retrieve the usage volume for each UE. All arguments provided were valid, correctly typed, and matched the tool schemas.
+]
+"
+2026-06-05T07:42:56.699834+00:00,gemma4:26b--19,200,26624.73,gemma4:26b,9918,235,10153,3908,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to count the UEs, list them to identify their IDs, and then retrieve the latest report for each specific UE to get the usage volume. The tools used were appropriate and necessary to fulfill the request.
+	The agent correctly used 'get_ue_count' to retrieve the number of UEs, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' with the correct 'ue_supi' arguments to fetch the usage volume for each UE. All tool calls were well-formed and aligned with the user's request.
+]
+"
+2026-06-05T07:43:28.788801+00:00,gemma4:26b--20,200,25115.02,gemma4:26b,9909,199,10108,3820,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to count the UEs, list them to obtain their identifiers, and then fetch the latest report for each specific UE to retrieve the usage volume. The tools used were appropriate and necessary to fulfill the request.
+	The agent correctly used 'get_ue_count' and 'list_all_ues' without arguments as required, and correctly called 'get_latest_report' for each identified UE using the 'ue_supi' string argument, which matches the tool's schema and the user's request.
+]
+"
+2026-06-05T07:43:59.475000+00:00,gemma4:26b--21,200,31318.74,gemma4:26b,9919,235,10154,3874,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to count the UEs, list them, and then retrieve the latest report for each to get the usage volume. The tools used were appropriate and necessary to fulfill the request.
+	The agent correctly used 'get_ue_count' to retrieve the number of UEs, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' with the correct 'ue_supi' arguments to fetch the usage volume for each UE. All tool calls were well-formed and aligned with the user's request.
+]
+"
+2026-06-05T07:44:36.264394+00:00,gemma4:26b--22,200,26952.41,gemma4:26b,9920,235,10155,3966,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to get the UE count, list the UEs, and then retrieve the latest report for each individual UE to fulfill the request. The tools used were appropriate and necessary to gather the required information.
+	The agent correctly used the available tools to fulfill the user's request. It used 'get_ue_count' to find the number of UEs, 'list_all_ues' to identify them, and 'get_latest_report' with the correct 'ue_supi' arguments to retrieve the usage volume for each UE. All arguments provided were appropriate, well-formed, and matched the tool schemas.
+]
+"
+2026-06-05T07:45:08.659244+00:00,gemma4:26b--23,200,25015.65,gemma4:26b,9919,199,10118,3847,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to get the count of UEs and then retrieve the latest report for each individual UE. It used the appropriate tools (get_ue_count, list_all_ues, and get_latest_report) to gather all necessary information to answer the user's request.
+	The agent correctly used 'get_ue_count' and 'list_all_ues' without arguments as required, and then correctly invoked 'get_latest_report' for each identified UE using the appropriate 'ue_supi' string argument, perfectly aligning with the user's request.
+]
+"
+2026-06-05T07:45:39.027616+00:00,gemma4:26b--24,200,26543.17,gemma4:26b,9919,235,10154,3962,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to count the UEs and retrieve their individual usage reports. It used 'get_ue_count' to get the total, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' for each UE to obtain the usage volume, which was the most logical and efficient sequence given the available tools.
+	The agent correctly used 'get_ue_count' to retrieve the number of UEs, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' with the correct 'ue_supi' arguments to fetch the usage volume for each UE, fully satisfying the user's request.
+]
+"
+2026-06-05T07:46:10.985766+00:00,gemma4:26b--25,200,25393.01,gemma4:26b,9911,199,10110,3823,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to count the UEs, list them to obtain their identifiers, and then retrieve the latest report for each specific UE to get the usage volume. The tools used were appropriate and necessary to fulfill the request.
+	The agent correctly used 'get_ue_count' and 'list_all_ues' without arguments as required, and then correctly called 'get_latest_report' for each identified UE using the appropriate 'ue_supi' string argument, perfectly aligning with the user's request.
+]
+"
+2026-06-05T07:46:41.834064+00:00,gemma4:26b--26,200,26312.81,gemma4:26b,9904,235,10139,4048,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to count the UEs and retrieve their individual usage reports. It used 'get_ue_count' to get the total, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' for each UE to obtain the usage volume, which was the most logical and efficient sequence given the available tools.
+	The agent correctly used the available tools to fulfill the user's request. It used 'get_ue_count' to find the number of UEs, 'list_all_ues' to identify them, and 'get_latest_report' with the correct 'ue_supi' arguments for each identified UE to retrieve the usage volumes. All arguments were well-formed and matched the tool definitions.
+]
+"
+2026-06-05T07:47:13.645310+00:00,gemma4:26b--27,200,26514.93,gemma4:26b,9912,235,10147,3927,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to get the UE count and then retrieve the latest usage reports for each identified UE. It used the appropriate tools (get_ue_count, list_all_ues, and get_latest_report) to gather all the information requested by the user.
+	The agent correctly used 'get_ue_count' to retrieve the number of UEs, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' with the correct 'ue_supi' arguments to fetch the usage volume for each UE. All tool calls were well-formed and aligned with the user's request.
+]
+"
+2026-06-05T07:47:45.589317+00:00,gemma4:26b--28,200,26523.67,gemma4:26b,9917,235,10152,4066,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to count the UEs and retrieve their individual reports. It used 'get_ue_count' to get the total, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' for each UE to obtain the usage volume, which was the most logical and efficient way to fulfill the request given the available tools.
+	The agent correctly used the available tools to fulfill the user's request. It used 'get_ue_count' to find the number of UEs, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' with the correct 'ue_supi' arguments to retrieve the usage volumes for each UE. All arguments provided were well-formed and matched the tool schemas.
+]
+"
+2026-06-05T07:48:17.568774+00:00,gemma4:26b--29,200,26830.51,gemma4:26b,9921,235,10156,4035,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to count the UEs and retrieve their individual usage reports. It used 'get_ue_count' to get the total, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' for each UE to obtain the usage volume, which was the most logical and complete approach given the available tools.
+	The agent correctly used the available tools to fulfill the user's request. It used 'get_ue_count' to find the number of UEs, 'list_all_ues' to identify them, and 'get_latest_report' with the correct 'ue_supi' arguments to retrieve the usage volume for each UE. All arguments were well-formed and matched the tool definitions.
+]
+"
+2026-06-05T07:48:49.885289+00:00,gemma4:26b--30,200,24981.67,gemma4:26b,9916,196,10112,3888,1.0,The system successfully retrieved the number of connected UEs and provided the specific usage volume for each as requested.,1.0,"[
+	The agent correctly identified the need to get the UE count, list the UEs, and then fetch the latest report for each individual UE to retrieve the usage volume. The tools used were appropriate and necessary to fulfill the request.
+	The agent correctly used the available tools to fulfill the user's request. It used 'get_ue_count' to find the number of UEs, 'list_all_ues' to identify the specific UEs, and 'get_latest_report' with the correct 'ue_supi' argument for each UE to retrieve the usage volume. All arguments provided were valid, correctly typed, and aligned with the tool definitions.
+]
+"

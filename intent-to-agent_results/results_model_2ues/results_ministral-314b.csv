@@ -1,0 +1,151 @@
+timestamp_utc,session_id,http_status,latency_ms,ollama_model,prompt_tokens,completion_tokens,total_tokens,response_size_bytes,tc_score,tc_reason,mcpu_score,mcpu_reason
+2026-06-11T15:07:51.764334+00:00,ministral-3:14b--1,200,59320.52,ministral-3:14b,4417,214,4631,3200,0.7,"The system successfully retrieved the number of UEs but failed to provide the usage volume for the last report, requiring further user input to resolve the request.",0.75,"[
+	The agent correctly identified the need to count UEs using 'get_ue_count'. For the usage volume, it attempted to use 'get_latest_report' with 'all' as an argument, which was a reasonable attempt to aggregate data, though the tool did not support that input. The agent correctly identified the limitation and provided the user with the necessary next steps to retrieve the specific data.
+	The agent correctly used 'get_ue_count' with no arguments as expected. However, for 'get_latest_report', it passed 'all' as the 'ue_supi', which is not a valid SUPI format, causing the tool to fail to retrieve the requested usage volume.
+]
+"
+2026-06-11T15:08:56.526137+00:00,ministral-3:14b--2,200,27347.01,ministral-3:14b,4421,158,4579,3069,0.6,"The system successfully retrieved the number of UEs but failed to provide the usage volume, only offering a suggestion on how to potentially find it.",0.75,"[
+	The agent correctly identified the need to get the UE count and attempted to retrieve usage volume. While 'get_latest_report' with 'all' was an incorrect usage of the tool (as it expects a specific SUPI), the agent correctly identified the UE count and provided a reasonable path forward for the user to get the volume data.
+	The agent correctly used get_ue_count with no arguments as expected. However, for get_latest_report, it passed 'all' as the ue_supi, which is not a valid SUPI format and caused the tool to fail, as the tool expects a specific identifier for a single UE.
+]
+"
+2026-06-11T15:09:29.360751+00:00,ministral-3:14b--3,200,26232.19,ministral-3:14b,4414,214,4628,3236,0.7,"The system successfully retrieved the number of UEs but failed to provide the usage volume for the last report, requiring further user input to resolve the request.",0.75,"[
+	The agent correctly identified 'get_ue_count' to answer the first part of the request. For the second part, it attempted to use 'get_latest_report' with an invalid argument ('all'), which was a reasonable attempt to aggregate data, though it failed because the tool does not support bulk queries. The agent correctly identified the limitation and provided the user with the necessary next steps to retrieve the information.
+	The agent correctly used 'get_ue_count' with no arguments as required. However, for 'get_latest_report', it passed 'all' as the 'ue_supi', which is not a valid SUPI format for the tool, leading to a failure to retrieve the usage volume.
+]
+"
+2026-06-11T15:10:01.055814+00:00,ministral-3:14b--4,200,19585.75,ministral-3:14b,4424,114,4538,2858,0.5,"The system successfully retrieved the number of UEs but failed to provide the usage volume, stating that no report exists.",0.5,"[
+	The agent correctly used 'get_ue_count' to find the number of UEs, but it failed to retrieve the usage volume correctly. Instead of listing the UEs first using 'list_all_ues' to get their IDs, it attempted to pass 'all' as a SUPI to 'get_latest_report', which is not a valid identifier for that tool.
+	The agent correctly used 'get_ue_count' with no arguments as expected. However, for 'get_latest_report', it passed 'all' as the 'ue_supi' argument, which is not a valid SUPI format and caused the tool to fail, as the tool expects a specific UE identifier.
+]
+"
+2026-06-11T15:10:26.019812+00:00,ministral-3:14b--5,200,25390.24,ministral-3:14b,4420,128,4548,2965,0.5,"The system successfully retrieved the number of UEs but failed to provide the usage volume, stating it does not exist, which only partially fulfills the request.",0.5,"[
+	The agent correctly used 'get_ue_count' to find the number of UEs, but failed to use 'list_all_ues' to identify the specific UEs before attempting to fetch reports. Instead, it incorrectly passed 'all' as a SUPI to 'get_latest_report', which is not a valid identifier for that tool.
+	The agent correctly used 'get_ue_count' with no arguments as expected. However, for 'get_latest_report', it passed 'all' as the 'ue_supi' argument, which is not a valid SUPI format and caused the tool to fail, as the tool expects a specific UE identifier.
+]
+"
+2026-06-11T15:10:56.785902+00:00,ministral-3:14b--6,200,22764.02,ministral-3:14b,4419,162,4581,3201,0.5,"The system successfully retrieved the number of UEs but failed to provide the usage volume, stating it does not exist, which only partially fulfills the request.",0.5,"[
+	The agent correctly used 'get_ue_count' to address the first part of the request. However, for the second part, it attempted to pass 'all' as a SUPI to 'get_latest_report', which is not a valid usage of that tool. The agent should have first used 'list_all_ues' to identify the specific UEs and then queried them individually or used 'get_statistics' to see if aggregate data was available.
+	The agent correctly called 'get_ue_count' with no arguments as expected. However, for 'get_latest_report', it passed 'all' as the 'ue_supi' argument. The tool expects a specific SUPI string, and 'all' is not a valid SUPI, leading to a failure to retrieve the requested usage volume.
+]
+"
+2026-06-11T15:11:24.944094+00:00,ministral-3:14b--7,200,28901.95,ministral-3:14b,4416,153,4569,3062,0.6,"The system successfully retrieved the number of UEs but failed to provide the usage volume, requiring further user input to obtain the requested data.",0.5,"[
+	The agent correctly identified the need to get the UE count and attempted to retrieve usage volume. While 'get_latest_report' with 'all' was an incorrect usage of the tool (as it expects a specific SUPI), the agent correctly identified the UE count and recognized the limitation of the available tools for aggregated volume, leading to a reasonable fallback response.
+	The agent correctly used 'get_ue_count' with no arguments as expected. However, for 'get_latest_report', it passed 'all' as the 'ue_supi' argument. The tool definition requires a specific SUPI string, and 'all' is not a valid SUPI format, leading to a failed request.
+]
+"
+2026-06-11T15:11:59.280828+00:00,ministral-3:14b--8,200,23491.15,ministral-3:14b,4418,150,4568,3015,0.6,"The system successfully identified the number of UEs but failed to provide the usage volume from the last report, instead offering alternative ways to retrieve the data.",0.75,"[
+	The agent correctly identified the need to get the UE count and attempted to retrieve usage volume. While 'get_latest_report' with 'all' was an incorrect usage of the tool (as it requires a specific SUPI), the agent correctly used 'get_ue_count' and identified the limitation of the available tools regarding aggregated volume reporting.
+	The agent correctly used 'get_ue_count' with no arguments as required. However, for 'get_latest_report', it passed 'all' as the 'ue_supi', which is not a valid SUPI format according to the tool's requirements, leading to a failure to retrieve the usage volume.
+]
+"
+2026-06-11T15:12:28.145763+00:00,ministral-3:14b--9,200,27561.84,ministral-3:14b,4424,233,4657,3228,0.5,"The system successfully retrieved the number of UEs but failed to provide the usage volume, only offering a workaround instead of the requested data.",0.75,"[
+	The agent correctly identified the need to count UEs and check reports. It used 'get_ue_count' appropriately. However, it attempted to use 'get_latest_report' with an invalid argument ('all') instead of first listing the UEs with 'list_all_ues' to retrieve the specific SUPIs required for the tool.
+	The agent correctly used get_ue_count with no arguments as expected. However, for get_latest_report, it passed 'all' as the ue_supi, which is not a valid SUPI format according to the tool's requirements, leading to a failed query.
+]
+"
+2026-06-11T15:13:01.083487+00:00,ministral-3:14b--10,200,22740.73,ministral-3:14b,4418,166,4584,3286,0.5,"The system successfully retrieved the number of UEs but failed to provide the usage volume from the last report, only offering alternative methods instead of the requested data.",0.75,"[
+	The agent correctly identified the need to count UEs and attempted to retrieve usage data. While 'get_latest_report' with 'all' was an unsuccessful attempt to aggregate data, the agent correctly used 'get_ue_count' for the first part of the request. Given the available tools, the agent would have needed to list UEs first and then iterate through them to get individual reports, which is a complex task, but the initial tool selection was logical.
+	The agent correctly used 'get_ue_count' with no arguments as expected. However, for 'get_latest_report', it passed 'all' as the 'ue_supi' argument. While the argument type (string) is correct, 'all' is not a valid SUPI, leading to a failure to retrieve the usage volume as requested.
+]
+"
+2026-06-11T15:13:29.240142+00:00,ministral-3:14b--11,200,21702.84,ministral-3:14b,4422,147,4569,2953,0.6,"The system successfully retrieved the number of UEs but failed to provide the usage volume, instead offering alternative ways to access that information.",0.75,"[
+	The agent correctly identified the need to count UEs using 'get_ue_count'. However, for the usage volume, it attempted to use 'get_latest_report' with an invalid argument ('all'), failing to realize that it should have first listed the UEs using 'list_all_ues' to obtain the specific SUPIs required for the tool.
+	The agent correctly used 'get_ue_count' with no arguments as expected. However, for 'get_latest_report', it passed 'all' as the 'ue_supi', which is not a valid SUPI format and caused the tool to fail, as the tool expects a specific SUPI string.
+]
+"
+2026-06-11T15:13:56.372480+00:00,ministral-3:14b--12,200,22577.77,ministral-3:14b,4423,167,4590,3113,0.5,"The system successfully retrieved the number of UEs but failed to provide the usage volume, only offering alternative methods instead of the requested data.",0.5,"[
+	The agent correctly used 'get_ue_count' to find the number of UEs, but failed to correctly retrieve the usage volume. Instead of using 'list_all_ues' to identify the specific UEs and then querying their reports, the agent attempted to pass 'all' as a SUPI to 'get_latest_report', which is not a valid usage of that tool.
+	The agent correctly used 'get_ue_count' with no arguments as expected. However, for 'get_latest_report', it passed 'all' as the 'ue_supi' argument, which is not a valid SUPI format and caused the tool to fail, as the tool expects a specific UE identifier.
+]
+"
+2026-06-11T15:14:24.314727+00:00,ministral-3:14b--13,200,27180.49,ministral-3:14b,4413,231,4644,3387,0.5,"The system successfully retrieved the number of UEs but failed to provide the usage volume, citing a lack of aggregated data and requiring further manual steps from the user.",0.75,"[
+	The agent correctly identified the need to count UEs and check reports. It used 'get_ue_count' appropriately. However, it attempted to use 'get_latest_report' with an invalid argument ('all'), which was not supported by the tool schema. It should have used 'list_all_ues' first to identify the specific SUPIs before attempting to fetch reports, making the tool usage partially suboptimal.
+	The agent correctly used 'get_ue_count' with no arguments. However, for 'get_latest_report', it passed 'all' as the 'ue_supi' argument. While the argument type (string) was correct, the value 'all' is not a valid SUPI format, leading to a failure to retrieve the requested usage volume.
+]
+"
+2026-06-11T15:14:57.250370+00:00,ministral-3:14b--14,200,20246.02,ministral-3:14b,4423,106,4529,2935,0.5,"The system successfully identified the number of UEs but failed to provide the requested usage volume, requiring further manual steps to retrieve the information.",0.5,"[
+	The agent correctly used 'get_ue_count' to find the number of UEs. However, for the usage volume, it attempted to pass 'all' as a SUPI to 'get_latest_report', which is not a valid use of that tool. The agent should have first used 'list_all_ues' to identify the specific UE SUPIs and then queried them individually or used 'get_statistics' if applicable.
+	The agent correctly used 'get_ue_count' with no arguments as expected. However, for 'get_latest_report', it passed 'all' as the 'ue_supi' argument. The tool definition expects a specific SUPI string, and 'all' is not a valid SUPI, leading to a failed tool execution.
+]
+"
+2026-06-11T15:15:22.894630+00:00,ministral-3:14b--15,200,21514.92,ministral-3:14b,4419,147,4566,3011,0.6,"The system successfully retrieved the number of UEs but failed to provide the usage volume, requiring further user input to obtain the requested data.",0.75,"[
+	The agent correctly used 'get_ue_count' to address the first part of the request. For the second part, it attempted to use 'get_latest_report' with an invalid argument ('all'), which was a reasonable attempt given the available tools, though it failed to retrieve the requested usage volume because it did not first list the UEs to get their specific SUPIs.
+	The agent correctly used 'get_ue_count' with no arguments as required. However, for 'get_latest_report', it passed 'all' as the 'ue_supi', which is not a valid SUPI format according to the tool's requirements, leading to a failure to retrieve the usage volume.
+]
+"
+2026-06-11T15:15:49.779845+00:00,ministral-3:14b--16,200,19353.76,ministral-3:14b,4420,113,4533,3064,0.5,"The system successfully retrieved the number of UEs but failed to provide the usage volume, stating it does not exist rather than retrieving the data from the last report.",0.5,"[
+	The agent correctly used 'get_ue_count' to find the number of UEs. However, it attempted to use 'get_latest_report' with an invalid argument ('all') to find the usage volume. While there was no single tool to get aggregate volume for all UEs, the agent could have listed the UEs first and then queried them individually, or checked if 'get_statistics' provided the requested volume information.
+	The agent correctly used 'get_ue_count' with no arguments. However, for 'get_latest_report', it passed 'all' as the 'ue_supi' argument. While the argument type (string) is correct, 'all' is not a valid SUPI identifier for this tool, indicating a misunderstanding of the tool's capability to aggregate data.
+]
+"
+2026-06-11T15:16:14.540605+00:00,ministral-3:14b--17,200,65024.57,ministral-3:14b,6701,105,6806,3064,0.5,"The system successfully identified the number of UEs but failed to provide the usage volume data as requested, instead offering to fetch it in a subsequent step.",0.5,"[
+	The agent correctly identified the number of UEs using 'get_ue_count' and 'list_all_ues', but failed to retrieve the usage volume as requested. It should have proceeded to call 'get_latest_report' for the identified UEs to fulfill the second part of the user's request.
+	The agent correctly used the 'get_ue_count' and 'list_all_ues' tools, both of which require no arguments, to fulfill the user's request for the number of UEs and their identification.
+]
+"
+2026-06-11T15:17:24.935215+00:00,ministral-3:14b--18,200,18508.09,ministral-3:14b,4421,104,4525,2859,0.75,"The system successfully retrieved the number of UEs but was unable to provide the usage volume, stating that no such report exists.",0.5,"[
+	The agent correctly identified the tool to get the UE count, but it attempted to use 'get_latest_report' with an invalid argument ('all') instead of first listing the UEs using 'list_all_ues' to then query their individual reports, or checking if 'get_statistics' provided the requested volume information.
+	The agent correctly called 'get_ue_count' with no arguments as expected. However, for 'get_latest_report', it passed 'all' as the 'ue_supi' argument, which is not a valid SUPI format and caused the tool to fail, indicating a misunderstanding of the tool's input requirements.
+]
+"
+2026-06-11T15:17:48.943486+00:00,ministral-3:14b--19,200,22557.27,ministral-3:14b,4416,166,4582,3107,0.6,"The system successfully retrieved the number of UEs but failed to provide the usage volume, only offering to fetch it through further steps.",0.5,"[
+	The agent correctly identified the need to get the UE count and attempted to retrieve usage volume. While 'get_latest_report' with 'all' was an incorrect usage of the tool (as it requires a specific SUPI), the agent correctly identified the UE count and attempted to address the volume request, though it lacked a tool to aggregate volume across all UEs.
+	The agent correctly used 'get_ue_count' with no arguments as expected. However, for 'get_latest_report', it passed 'all' as the 'ue_supi' argument. The tool definition requires a specific SUPI string, and 'all' is not a valid SUPI format, leading to a failure to retrieve the requested usage volume.
+]
+"
+2026-06-11T15:18:16.849974+00:00,ministral-3:14b--20,200,26099.24,ministral-3:14b,4415,144,4559,3116,0.7,"The system successfully identified the number of UEs but could not provide the aggregated usage volume as requested, explaining the limitation and offering an alternative path.",0.5,"[
+	The agent correctly used 'get_ue_count' to address the first part of the request. For the second part, it attempted to use 'get_latest_report' with an invalid argument ('all'), which is not supported by the tool schema. While the agent correctly identified that no aggregated report tool exists, it could have first used 'list_all_ues' to identify the specific SUPIs before attempting to fetch reports, rather than guessing an 'all' parameter.
+	The agent correctly used 'get_ue_count' with no arguments as expected. However, for 'get_latest_report', it passed 'all' as the 'ue_supi' argument, which is not a valid SUPI format and caused the tool to fail, as the tool expects a specific UE identifier.
+]
+"
+2026-06-11T15:18:48.379462+00:00,ministral-3:14b--21,200,21689.99,ministral-3:14b,4417,150,4567,3060,0.6,"The system successfully identified the number of UEs but failed to provide the usage volume, instead offering to provide individual reports or fetch data for a specific SUPI.",0.75,"[
+	The agent correctly identified the need to count UEs and check reports. It used 'get_ue_count' appropriately. However, it attempted to use 'get_latest_report' with an invalid argument ('all'), failing to first list the UEs using 'list_all_ues' to obtain the necessary SUPIs to fulfill the request for usage volume.
+	The agent correctly used 'get_ue_count' with no arguments as required. For 'get_latest_report', it passed 'all' as the 'ue_supi' argument; while this is the correct type (string), the tool documentation implies it expects a specific SUPI identifier, making 'all' an invalid or unsupported value for this specific tool.
+]
+"
+2026-06-11T15:19:15.592342+00:00,ministral-3:14b--22,200,22761.83,ministral-3:14b,4418,162,4580,3146,0.5,"The system successfully retrieved the number of UEs but failed to provide the usage volume, stating it does not exist, which only partially fulfills the request.",0.5,"[
+	The agent correctly used 'get_ue_count' to address the first part of the request. However, for the second part, it attempted to use 'get_latest_report' with an invalid argument ('all'), which is not supported by the tool definition. The agent should have first listed the UEs using 'list_all_ues' to identify valid SUPIs before attempting to retrieve usage volume.
+	The agent correctly used 'get_ue_count' with no arguments. However, for 'get_latest_report', it passed 'all' as the 'ue_supi' argument, which is not a valid SUPI format and caused the tool to fail, as the tool expects a specific UE identifier.
+]
+"
+2026-06-11T15:19:43.703792+00:00,ministral-3:14b--23,200,32471.61,ministral-3:14b,4413,164,4577,3128,0.5,"The system successfully retrieved the number of UEs but failed to provide the usage volume, only offering suggestions on how to find it instead of performing the retrieval itself.",0.75,"[
+	The agent correctly identified the need to count UEs using 'get_ue_count'. However, for the usage volume, it attempted to pass 'all' as a SUPI to 'get_latest_report', which is not a valid SUPI. The agent should have first used 'list_all_ues' to retrieve the specific SUPIs and then queried them individually, or used 'get_statistics' if it provided aggregated volume data.
+	The agent correctly used get_ue_count with no arguments as required. However, for get_latest_report, it passed 'all' as the ue_supi, which is not a valid SUPI format and caused the tool to fail, as the tool expects a specific UE identifier.
+]
+"
+2026-06-11T15:20:21.589796+00:00,ministral-3:14b--24,200,25539.22,ministral-3:14b,4420,206,4626,3180,0.7,"The system successfully retrieved the number of UEs but could not provide the aggregated usage volume, instead offering a workaround to query individual UEs.",0.75,"[
+	The agent correctly identified the need to get the UE count and attempted to retrieve usage volume. While 'get_latest_report' with 'all' was an incorrect usage of the tool parameter, the agent correctly identified the limitation and provided the user with the necessary next steps to retrieve the data using the available tools.
+	The agent correctly used get_ue_count with no arguments. However, for get_latest_report, it passed 'all' as the ue_supi, which is not a valid SUPI format according to the tool's requirements, leading to a failure to retrieve the usage volume.
+]
+"
+2026-06-11T15:20:52.594104+00:00,ministral-3:14b--25,200,25896.48,ministral-3:14b,4423,137,4560,2987,0.5,"The system successfully retrieved the number of UEs but failed to provide the usage volume, stating it does not exist, which only partially fulfills the request.",0.5,"[
+	The agent correctly used 'get_ue_count' to find the number of UEs. However, it failed to use 'list_all_ues' to identify the specific SUPIs needed to retrieve usage reports, instead incorrectly attempting to pass 'all' as a SUPI to 'get_latest_report', which is not a valid identifier.
+	The agent correctly used 'get_ue_count' with no arguments as expected. However, for 'get_latest_report', it passed 'all' as the 'ue_supi' argument, which is not a valid SUPI format and caused the tool to fail, indicating a misunderstanding of the tool's input requirements.
+]
+"
+2026-06-11T15:21:23.840086+00:00,ministral-3:14b--26,200,21422.66,ministral-3:14b,4422,149,4571,3267,0.5,"The system successfully retrieved the number of UEs but failed to provide the usage volume, only offering alternative methods instead of the requested data.",0.5,"[
+	The agent correctly used 'get_ue_count' to address the first part of the request. However, for the second part, it attempted to use 'get_latest_report' with an invalid argument ('all'), which is not supported by the tool definition. The agent should have first used 'list_all_ues' to identify the specific UEs and then queried them individually or used 'get_statistics' to see if that provided the requested volume information.
+	The agent correctly used 'get_ue_count' with no arguments as expected. However, for 'get_latest_report', it passed 'all' as the 'ue_supi' argument, which is not a valid SUPI and caused the tool to fail. The tool expects a specific SUPI string, and the agent should have listed the UEs first or handled the lack of an aggregate report differently.
+]
+"
+2026-06-11T15:21:50.733561+00:00,ministral-3:14b--27,200,20886.11,ministral-3:14b,4418,145,4563,3020,0.5,"The system successfully identified the number of UEs but failed to provide the requested usage volume, indicating that the data was not available in the expected format.",0.5,"[
+	The agent correctly identified and used 'get_ue_count' to answer the first part of the request. For the second part, it attempted to use 'get_latest_report' with an invalid argument ('all'), which was a reasonable attempt given the available tools, though it failed to retrieve the requested usage volume because no tool exists to aggregate volume across all UEs.
+	The agent correctly used 'get_ue_count' with no arguments. However, for 'get_latest_report', it passed 'all' as the 'ue_supi' argument, which is not a valid SUPI format and does not align with the tool's requirement for a specific UE identifier.
+]
+"
+2026-06-11T15:22:17.034749+00:00,ministral-3:14b--28,200,26893.79,ministral-3:14b,4419,155,4574,3022,0.5,"The system successfully retrieved the number of UEs but failed to provide the usage volume, only offering an alternative method to obtain it.",0.75,"[
+	The agent correctly identified the tool to get the UE count. However, it attempted to use 'get_latest_report' with an invalid argument ('all') instead of first listing the UEs or querying them individually, which was necessary given the tool's schema requirements.
+	The agent correctly used 'get_ue_count' with no arguments as expected. For 'get_latest_report', it passed 'all' as the 'ue_supi' argument; while this is the correct type (string), the tool expects a specific SUPI identifier, making 'all' an invalid value for the tool's logic, though it was a reasonable attempt to fulfill the user's request for aggregated data.
+]
+"
+2026-06-11T15:22:49.362587+00:00,ministral-3:14b--29,200,20628.32,ministral-3:14b,4420,137,4557,3101,0.5,"The system successfully retrieved the number of UEs but failed to provide the usage volume, stating it does not exist, which means the task was only partially completed.",0.5,"[
+	The agent correctly identified 'get_ue_count' to address the first part of the request. For the second part, it attempted to use 'get_latest_report' with an invalid argument ('all'), which was a reasonable attempt given the available tools, though it failed to retrieve the requested usage volume because it did not first list the UEs to get their specific SUPIs.
+	The agent correctly called 'get_ue_count' with no arguments as required. However, for 'get_latest_report', it passed 'all' as the 'ue_supi' argument, which is not a valid SUPI format and caused the tool to fail, indicating a misunderstanding of the tool's input requirements.
+]
+"
+2026-06-11T15:23:15.375567+00:00,ministral-3:14b--30,200,21845.93,ministral-3:14b,4420,147,4567,3090,0.5,"The system successfully identified the number of UEs but failed to provide the usage volume, instead shifting the burden to the user to provide specific identifiers.",0.75,"[
+	The agent correctly identified the need to count UEs and check usage reports. It used 'get_ue_count' appropriately. However, for the usage volume, it attempted to use 'get_latest_report' with an invalid argument ('all'), which was not supported by the tool schema. A more robust approach would have been to use 'list_all_ues' first to identify the specific SUPIs before attempting to fetch reports.
+	The agent correctly used 'get_ue_count' with no arguments as required. However, for 'get_latest_report', it passed 'all' as the 'ue_supi', which is not a valid SUPI format and caused the tool to fail, even though the agent was attempting to fulfill the user's request for aggregated data.
+]
+"

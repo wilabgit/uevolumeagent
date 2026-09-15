@@ -1,0 +1,151 @@
+timestamp_utc,session_id,http_status,latency_ms,ollama_model,prompt_tokens,completion_tokens,total_tokens,response_size_bytes,tc_score,tc_reason,mcpu_score,mcpu_reason
+2026-06-11T08:20:00.424534+00:00,ministral-3:8b--1,200,39615.21,ministral-3:8b,4457,100,4557,2845,0.5,"The system successfully identified the number of UEs but failed to provide the specific usage volume requested, only offering to retrieve it through further steps.",0.5,"[
+	The agent correctly identified the number of UEs using 'get_ue_count', but failed to retrieve the usage volume. It should have used 'list_all_ues' to get the SUPIs and then 'get_latest_report' for each UE to fulfill the request for usage volume from the last report, rather than stopping and asking the user if they want that data.
+	The agent correctly used the available tools 'get_ue_count' and 'get_statistics' which require no arguments, matching the tool definitions perfectly to retrieve the requested information.
+]
+"
+2026-06-11T08:20:45.300419+00:00,ministral-3:8b--2,200,16008.19,ministral-3:8b,4450,114,4564,2964,0.5,"The system correctly identified the number of UEs, but it provided the total number of reports instead of the total usage volume as requested.",0.5,"[
+	The agent successfully retrieved the number of UEs using 'get_ue_count', but failed to retrieve the usage volume from the last report. The agent used 'get_statistics' which provided aggregate report counts rather than the specific usage volume requested. The agent should have used 'list_all_ues' to identify the UEs and then 'get_latest_report' for each to obtain the actual usage volume.
+	The agent correctly used 'get_ue_count' and 'get_statistics' with no arguments, which matches the tool definitions and successfully retrieved the requested information regarding the number of UEs and overall report volume.
+]
+"
+2026-06-11T08:21:06.530951+00:00,ministral-3:8b--3,200,14980.37,ministral-3:8b,4453,91,4544,2944,0.5,"The system correctly identified the number of UEs, but it provided the total number of reports instead of the total usage volume as requested.",0.5,"[
+	The agent successfully retrieved the number of UEs using 'get_ue_count', but failed to retrieve the usage volume for the UEs. The agent used 'get_statistics' which only provided aggregate report counts, not the specific usage volume requested. The agent should have used 'list_all_ues' followed by 'get_latest_report' for each UE to fulfill the request.
+	The agent correctly used the available tools to retrieve the requested information. 'get_ue_count' was called with no arguments as required to get the number of UEs, and 'get_statistics' was called with no arguments to retrieve the overall report volume, which aligns with the user's request for usage volume from the last report.
+]
+"
+2026-06-11T08:21:26.707786+00:00,ministral-3:8b--4,200,25148.13,ministral-3:8b,9889,268,10157,5144,1.0,"The system successfully retrieved the number of UEs and provided the requested information regarding the usage volume, even though the result was that no data was available.",1.0,"[
+	The agent correctly identified the need to count the UEs and retrieve usage data. It used 'get_ue_count' to determine the number of UEs, 'list_all_ues' (implied by identifying UE1 and UE2) or similar logic to find the specific UEs, and then appropriately used 'get_latest_report' and 'get_ue_volume' to attempt to fetch the requested usage data for those UEs. The tool selection was comprehensive and directly addressed the user's request.
+	The agent correctly used the available tools to address the user's request. It retrieved the UE count, checked statistics, and queried the latest reports and usage volumes for the identified UEs (UE1 and UE2) using the correct argument types and structures as defined in the tool schemas.
+]
+"
+2026-06-11T08:21:57.050700+00:00,ministral-3:8b--5,200,16062.36,ministral-3:8b,4450,115,4565,2823,1.0,The system successfully retrieved the number of connected UEs and the total usage volume as requested.,1.0,"[
+	The agent correctly identified the need to retrieve the number of UEs and the usage volume statistics. It used 'get_ue_count' to find the number of UEs and 'get_statistics' to retrieve the total usage volume data, which were the most appropriate tools available for the request.
+	The agent correctly used 'get_ue_count' and 'get_statistics' with no arguments, which matches the tool definitions and successfully retrieved the requested information regarding the number of UEs and the total volume of reports.
+]
+"
+2026-06-11T08:22:18.296484+00:00,ministral-3:8b--6,200,15222.8,ministral-3:8b,4456,98,4554,2778,0.5,"The system successfully retrieved the number of connected UEs but failed to provide the usage volume, which was a core part of the request.",0.5,"[
+	The agent correctly identified the number of UEs using 'get_ue_count', but failed to retrieve the usage volume. It had access to 'list_all_ues' and 'get_latest_report' to fulfill the second part of the request but instead stopped and asked the user for further instructions.
+	The agent correctly used the available tools 'get_ue_count' and 'get_statistics' without requiring any arguments, which matches the tool definitions. The inputs were well-formed and appropriate for the user's request.
+]
+"
+2026-06-11T08:22:38.698924+00:00,ministral-3:8b--7,200,17170.18,ministral-3:8b,4452,120,4572,2928,0.5,"The system successfully identified the number of UEs but failed to retrieve the specific usage volume data, requiring further user intervention.",0.5,"[
+	The agent correctly identified the number of UEs using 'get_ue_count', but failed to retrieve the usage volume from the last report. It should have used 'list_all_ues' to get the SUPIs and then 'get_latest_report' for each UE to fulfill the second part of the user's request.
+	The agent correctly used the available tools 'get_ue_count' and 'get_statistics' without requiring any arguments, which matches the tool definitions. The inputs were empty as expected for these tools, and they successfully retrieved the information requested by the user.
+]
+"
+2026-06-11T08:23:01.070530+00:00,ministral-3:8b--8,200,16759.89,ministral-3:8b,4450,118,4568,3014,0.5,"The system correctly identified the number of UEs, but it provided the total number of reports instead of the usage volume as requested.",0.5,"[
+	The agent successfully retrieved the number of UEs using 'get_ue_count', but failed to retrieve the usage volume from the last report. The agent used 'get_statistics' which only provided aggregate report counts, rather than using 'list_all_ues' followed by 'get_latest_report' for each UE to actually obtain the requested usage volume.
+	The agent correctly used the available tools to retrieve the requested information. 'get_ue_count' was used to find the number of UEs, and 'get_statistics' was used to retrieve the total usage volume (reports). Both tools require no arguments, and the agent correctly passed empty objects as arguments.
+]
+"
+2026-06-11T08:23:23.041330+00:00,ministral-3:8b--9,200,15854.69,ministral-3:8b,4452,97,4549,2975,0.9,"The system successfully identified the number of UEs and provided the total usage volume, though it offered to provide further details rather than presenting the specific usage volume per UE immediately.",0.5,"[
+	The agent correctly identified the number of UEs using 'get_ue_count' and 'get_statistics', but failed to retrieve the usage volume as requested. It should have used 'list_all_ues' to get the SUPIs and then 'get_latest_report' for each UE to fulfill the second part of the user's request instead of stopping and asking the user if they wanted that data.
+	The agent correctly used the available tools 'get_ue_count' and 'get_statistics' without requiring any arguments, which matches the tool definitions. The inputs were well-formed and appropriate for the user's request to retrieve the number of UEs and overall report statistics.
+]
+"
+2026-06-11T08:23:44.096555+00:00,ministral-3:8b--10,200,17070.7,ministral-3:8b,4453,103,4556,2925,0.5,"The system successfully identified the number of UEs but failed to provide the usage volume, requiring further clarification to complete the task.",0.5,"[
+	The agent correctly identified the number of UEs using 'get_ue_count', but failed to retrieve the usage volume from the last report. While it used 'get_statistics' to get general storage info, it did not use the available 'list_all_ues' and 'get_latest_report' tools to actually fetch the specific usage volume requested by the user.
+	The agent correctly used the 'get_ue_count' and 'get_statistics' tools, which require no arguments, to gather the requested information about the number of UEs and report statistics. The tool calls were well-formed and aligned with the user's request.
+]
+"
+2026-06-11T08:24:06.396127+00:00,ministral-3:8b--11,200,17514.1,ministral-3:8b,4443,121,4564,2852,0.5,"The system successfully identified the number of UEs but failed to retrieve the usage volume, which was a core part of the request.",0.5,"[
+	The agent correctly identified the number of UEs using 'get_ue_count', but failed to retrieve the usage volume as requested. It had the 'list_all_ues' and 'get_latest_report' tools available to fetch the specific usage data for each UE, but instead stopped and asked the user if they wanted that information.
+	The agent correctly used the 'get_ue_count' and 'get_statistics' tools, both of which require no arguments. The calls were well-formed and appropriate for gathering the requested information.
+]
+"
+2026-06-11T08:24:29.109773+00:00,ministral-3:8b--12,200,15762.01,ministral-3:8b,4452,107,4559,2717,0.4,"The system identified the number of UEs but failed to provide the usage volume, instead reporting the total number of stored records in the database.",1.0,"[
+	The agent correctly identified and used the available tools (get_ue_count and get_statistics) to retrieve the number of UEs and the total usage volume as requested by the user.
+	The agent correctly used the 'get_ue_count' and 'get_statistics' tools, both of which require no arguments, to retrieve the requested information about the number of UEs and usage volume.
+]
+"
+2026-06-11T08:24:50.080681+00:00,ministral-3:8b--13,200,16958.63,ministral-3:8b,4448,121,4569,2937,0.5,"The system successfully identified the number of UEs but failed to provide the specific usage volume data requested, only offering to retrieve it in a subsequent step.",0.5,"[
+	The agent correctly identified the number of UEs using 'get_ue_count', but failed to retrieve the usage volume from the last report. It should have used 'list_all_ues' to get the SUPIs and then 'get_latest_report' for each UE to fulfill the second part of the user's request.
+	The agent correctly used the available tools to retrieve the UE count and overall statistics. Both tools (get_ue_count and get_statistics) require no arguments, and the agent correctly called them with empty argument objects, which is appropriate and well-formed.
+]
+"
+2026-06-11T08:25:12.239765+00:00,ministral-3:8b--14,200,24867.69,ministral-3:8b,7032,252,7284,4151,0.5,"The system successfully identified the number of UEs but failed to retrieve the usage volume from the last report, stating that no recent reports were available.",1.0,"[
+	The agent correctly identified the need to count the UEs and check for usage reports. It used 'get_ue_count' to answer the first part of the request and 'get_latest_report' for the identified UEs to attempt to retrieve usage volume, which was the most logical approach given the available tools.
+	The agent correctly used 'get_ue_count' and 'get_statistics' without arguments as required, and correctly used 'get_latest_report' with the appropriate 'ue_supi' string arguments to attempt to retrieve usage data for the identified UEs.
+]
+"
+2026-06-11T08:25:42.323050+00:00,ministral-3:8b--15,200,16787.76,ministral-3:8b,4456,103,4559,2812,0.4,"The system correctly identified the number of UEs, but it provided the total number of reports stored in the database instead of the total usage volume associated with those UEs.",1.0,"[
+	The agent correctly identified and used the available tools (get_ue_count and get_statistics) to retrieve the number of UEs and the usage volume information requested by the user.
+	The agent correctly used the available tools 'get_ue_count' and 'get_statistics' without any arguments, which matches the tool definitions. These tools provided the necessary information to answer the user's request regarding the number of UEs and usage volume statistics.
+]
+"
+2026-06-11T08:26:04.307642+00:00,ministral-3:8b--16,200,19722.0,ministral-3:8b,7041,172,7213,3922,1.0,The system successfully retrieved the number of connected UEs and provided the status of their usage volume based on the available data.,1.0,"[
+	The agent correctly identified the need to count the UEs and retrieve usage reports. It used 'get_ue_count' to find the number of UEs, 'list_all_ues' would have been a logical step to identify the specific UE IDs, but the agent inferred 'UE1' and 'UE2' and used 'get_latest_report' for each, which was an appropriate strategy to fulfill the request for usage volume.
+	The agent correctly used get_ue_count to determine the number of UEs and then used get_latest_report for each identified UE to attempt to retrieve usage volume. The arguments passed were correct in type and structure according to the tool definitions.
+]
+"
+2026-06-11T08:26:29.226885+00:00,ministral-3:8b--17,200,15416.92,ministral-3:8b,4453,114,4567,2915,0.2,"The system failed to provide the total usage volume, instead reporting the number of stored reports, which does not align with the requested metric.",0.5,"[
+	The agent successfully retrieved the number of UEs using 'get_ue_count', but failed to retrieve the actual usage volume from the last report. The agent used 'get_statistics' which only provided aggregate storage counts, rather than using 'list_all_ues' followed by 'get_latest_report' for each UE to obtain the requested usage volume data.
+	The agent correctly used the available tools 'get_ue_count' and 'get_statistics' without requiring any arguments, which matches the tool definitions and successfully retrieved the information requested by the user.
+]
+"
+2026-06-11T08:26:49.843324+00:00,ministral-3:8b--18,200,18205.27,ministral-3:8b,4457,172,4629,3140,0.5,"The system identified the number of UEs but failed to provide the usage volume, instead providing the total number of reports stored.",0.5,"[
+	The agent successfully retrieved the number of UEs using 'get_ue_count' and 'get_statistics', but failed to retrieve the actual usage volume from the last report as requested. It should have used 'list_all_ues' to identify the UEs and then 'get_latest_report' for each to fulfill the second part of the user's request.
+	The agent correctly used the available tools 'get_ue_count' and 'get_statistics' without arguments, as neither tool requires any input parameters. These tools were appropriate for gathering the requested information regarding the number of UEs and the total volume of reports.
+]
+"
+2026-06-11T08:27:13.239651+00:00,ministral-3:8b--19,200,17316.18,ministral-3:8b,4453,107,4560,2903,0.5,"The system successfully identified the number of UEs but failed to provide the requested usage volume, requiring additional input to complete the task.",0.5,"[
+	The agent correctly identified the number of UEs but failed to retrieve the usage volume from the last report. It should have used 'list_all_ues' to get the SUPIs and then 'get_latest_report' for each UE to fulfill the second part of the user's request instead of stopping and asking the user for input.
+	The agent correctly used the available tools 'get_ue_count' and 'get_statistics' to retrieve the requested information. Both tools require no arguments, and the agent correctly called them with empty argument objects, which aligns with the tool definitions.
+]
+"
+2026-06-11T08:27:35.764104+00:00,ministral-3:8b--20,200,18189.77,ministral-3:8b,4451,156,4607,2868,0.4,"The system provided the number of UEs but failed to provide the total usage volume, instead reporting the number of stored reports.",1.0,"[
+	The agent correctly identified and used the available tools (get_ue_count and get_statistics) to retrieve the number of UEs and the total usage volume (reports) as requested by the user.
+	The agent correctly used 'get_ue_count' and 'get_statistics' with no arguments, which matches the tool definitions and successfully retrieved the requested information regarding the number of UEs and the total usage volume (reports).
+]
+"
+2026-06-11T08:27:59.150276+00:00,ministral-3:8b--21,200,21736.47,ministral-3:8b,7045,199,7244,4198,0.4,"The system identified the number of UEs but failed to retrieve the specific usage volume from the last report, providing historical data instead of the requested current information.",1.0,"[
+	The agent correctly identified the need to get the UE count and then attempted to retrieve usage data for the identified UEs using the available tools. Since the UEs were not explicitly listed in the initial count, the agent correctly used 'get_ue_count' and 'get_statistics' to identify the UEs and then attempted to fetch reports for them using 'get_latest_report', which was the most logical approach given the available primitives.
+	The agent correctly used 'get_ue_count' to retrieve the number of UEs and 'get_statistics' to retrieve general report data. It then appropriately attempted to fetch the latest reports for the identified UEs using 'get_latest_report' with the correct 'ue_supi' argument format. All tool calls were well-formed and aligned with the user's request.
+]
+"
+2026-06-11T08:28:26.091679+00:00,ministral-3:8b--22,200,32140.76,ministral-3:8b,4455,114,4569,2995,0.5,"The system correctly identified the number of UEs, but it provided the total number of reports instead of the usage volume as requested.",0.5,"[
+	The agent correctly identified the number of UEs using 'get_ue_count', but failed to retrieve the specific usage volume requested. The agent used 'get_statistics' which provided aggregate report counts rather than the usage volume for the UEs. To fulfill the request, the agent should have first listed the UEs using 'list_all_ues' and then called 'get_latest_report' or 'get_ue_volume' for the identified UEs.
+	The agent correctly used the available tools 'get_ue_count' and 'get_statistics' without requiring any arguments, which matches the tool definitions. These tools were appropriate for retrieving the number of UEs and the overall usage volume statistics as requested by the user.
+]
+"
+2026-06-11T08:29:03.419818+00:00,ministral-3:8b--23,200,15881.95,ministral-3:8b,4451,114,4565,2991,0.2,"The system failed to provide the total usage volume, instead reporting the number of stored reports, which does not align with the requested metric.",0.5,"[
+	The agent successfully retrieved the number of UEs using 'get_ue_count', but failed to retrieve the usage volume from the last report. The agent used 'get_statistics' which only provided aggregate storage counts, rather than using 'list_all_ues' followed by 'get_latest_report' for each UE to actually obtain the requested usage volume data.
+	The agent correctly used the 'get_ue_count' and 'get_statistics' tools, both of which require no arguments, to retrieve the requested information about the number of UEs and the usage volume (total reports). The inputs were perfectly aligned with the tool definitions and the user's request.
+]
+"
+2026-06-11T08:29:24.512891+00:00,ministral-3:8b--24,200,15790.83,ministral-3:8b,4455,107,4562,2889,0.5,"The system successfully identified the number of UEs but failed to provide the requested usage volume, requiring additional steps to complete the task.",0.5,"[
+	The agent correctly identified the number of UEs using 'get_ue_count', but failed to retrieve the usage volume. It had the 'list_all_ues' and 'get_latest_report' tools available, which would have allowed it to fetch the usage volume for the identified UEs as requested, rather than stopping and asking the user for more information.
+	The agent correctly used the available tools 'get_ue_count' and 'get_statistics', both of which require no arguments, to retrieve the requested information about the number of UEs and the total report volume.
+]
+"
+2026-06-11T08:29:45.503007+00:00,ministral-3:8b--25,200,15834.97,ministral-3:8b,4453,99,4552,2901,0.5,"The system successfully identified the number of UEs but failed to provide the usage volume for the last report, requiring additional input from the user to complete the task.",0.5,"[
+	The agent correctly identified the number of UEs using 'get_ue_count' and 'get_statistics', but failed to retrieve the usage volume from the last report. It should have used 'list_all_ues' to get the SUPIs and then 'get_latest_report' for each UE to fulfill the second part of the user's request.
+	The agent correctly used the available tools to gather the requested information. 'get_ue_count' and 'get_statistics' were called without arguments, which matches their schema requirements, and the information retrieved was appropriate for answering the user's request.
+]
+"
+2026-06-11T08:30:06.618235+00:00,ministral-3:8b--26,200,193004.22,ministral-3:8b,4452,82,4534,2795,0.5,"The system successfully retrieved the number of UEs but failed to provide the specific usage volume, stating it requires further retrieval.",0.5,"[
+	The agent correctly identified the number of UEs using 'get_ue_count', but failed to retrieve the usage volume. While it used 'get_statistics', that tool only provided the total number of reports, not the usage volume. The agent should have used 'list_all_ues' to identify the UEs and then 'get_latest_report' for each to fulfill the request for usage volume.
+	The agent correctly used the available tools 'get_ue_count' and 'get_statistics' which require no arguments, matching the tool definitions and the user's request for network statistics.
+]
+"
+2026-06-11T08:33:24.833575+00:00,ministral-3:8b--27,200,14789.24,ministral-3:8b,4457,82,4539,2743,0.5,"The system successfully retrieved the number of UEs but failed to provide the specific usage volume, stating it requires further retrieval.",0.5,"[
+	The agent correctly identified the number of UEs but failed to retrieve the usage volume from the last report. While it used 'get_ue_count' and 'get_statistics', it did not use 'list_all_ues' followed by 'get_latest_report' for each UE to actually provide the usage volume requested by the user.
+	The agent correctly used the available tools 'get_ue_count' and 'get_statistics' which require no arguments, matching the tool definitions and the user's request for UE count and report statistics.
+]
+"
+2026-06-11T08:33:44.888653+00:00,ministral-3:8b--28,200,20208.3,ministral-3:8b,7031,190,7221,3925,0.5,"The system successfully retrieved the number of UEs but failed to provide the usage volume from the last report, stating that no recent usage reports are available.",1.0,"[
+	The agent correctly identified the need to count the UEs and retrieve usage reports. It used 'get_ue_count' to find the number of UEs and 'get_latest_report' for each identified UE to attempt to retrieve the usage volume, which was the most appropriate strategy given the available tools.
+	The agent correctly used get_ue_count and get_statistics to gather overall network information, and then correctly used get_latest_report with the appropriate UE identifiers (UE1 and UE2) to attempt to retrieve the usage volume as requested.
+]
+"
+2026-06-11T08:34:10.378035+00:00,ministral-3:8b--29,200,15544.83,ministral-3:8b,4450,102,4552,2952,0.5,"The system correctly identified the number of UEs, but it failed to provide the total usage volume, instead providing the count of stored reports.",0.75,"[
+	The agent correctly identified the number of UEs using 'get_ue_count' and 'get_statistics'. However, the user also requested the usage volume from the 'last report'. The agent failed to call 'get_latest_report' for the specific UEs to retrieve the actual usage volume, instead relying on aggregate statistics which do not provide the specific volume per UE from the last report.
+	The agent correctly used the available tools 'get_ue_count' and 'get_statistics' without any arguments, which matches the tool definitions. These tools provided the necessary information to answer the user's request regarding the number of UEs and the total usage volume.
+]
+"
+2026-06-11T08:34:31.120218+00:00,ministral-3:8b--30,200,15650.31,ministral-3:8b,4448,94,4542,2833,0.5,"The system successfully retrieved the number of UEs but failed to provide the requested usage volume, which was a key part of the task.",0.5,"[
+	The agent correctly identified the number of UEs using 'get_ue_count', but failed to retrieve the usage volume. It should have used 'list_all_ues' to get the SUPIs and then 'get_latest_report' for each UE to fulfill the second part of the user's request instead of stopping and asking the user for permission.
+	The agent correctly used the available tools 'get_ue_count' and 'get_statistics' without requiring any arguments, which matches the tool definitions. The inputs provided (empty objects) were appropriate for these tools.
+]
+"
