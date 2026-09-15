@@ -1,0 +1,33 @@
+Col callback server in ascolto e lanciando python3 request2SMF, la risposta del SMF è costruita così:
+
+{
+    "eventNotifs": [
+        {
+            "customized_data": {
+                "Usage Report": {
+                    "Duration": 10,
+                    "NoP": {
+                        "Downlink": 0,
+                        "Total": 0,
+                        "Uplink": 0
+                    },
+                    "SEID": 1,
+                    "Trigger": "Periodic Reporting",
+                    "UR-SEQN": 127,
+                    "Volume": {
+                        "Downlink": 0,
+                        "Total": 0,
+                        "Uplink": 0
+                    }
+                },
+                "event": "",
+                "timeStamp": ""
+            },
+            "event": "QOS_MON",
+            "pduSeId": 0,
+            "supi": "208950000000031",
+            "timeStamp": "3972725391"
+        }
+    ],
+    "notifId": "notifSMF"
+}

@@ -1,0 +1,25 @@
+curl -X POST --http2-prior-knowledge \
+  -H "Content-Type: application/json" \
+  -d '{
+    "notifId": "notifSMF",
+    "notifUri": "https://172.17.0.1/callbacks/volume",
+    "ImmeRep": true,
+    "expiry": "2025-11-27T10:45:00Z",
+    "notifMethod": "PERIODIC",
+    "repPeriod": 30,
+    "eventSubs": [
+      {
+        "event": "QOS_MON",
+        "ueIpAddr": {"ipv4Addr": "12.1.1.2"},
+        "upfEvents": [
+          {
+            "type": "QOS_MONITORING",
+            "immediateFlag": true,
+            "measurementTypes": ["VOLUME_MEASUREMENT"],
+            "granularityOfMeasurement": "PER_SESSION"
+          }
+        ]
+      }
+    ]
+  }' \
+  http://192.168.70.133:8080/nsmf_event-exposure/v1/subscriptions
