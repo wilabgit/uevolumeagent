@@ -1,4 +1,4 @@
-# Towards trustworthy AI agents for Mobile Core Networks  – Code Repository
+# Towards Trustworthy AI Agents for Mobile Core Networks  – Code Repository
 
 - Folder intent-to-agent_results provides the scripts to submit the intent to the agent and to run the experiment, including the obtained results.
 - Folder gnb_Oaibox40 contains the configuration used to setup the gNB, and the script to start and stop the gNB.
