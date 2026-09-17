@@ -4,6 +4,6 @@ To start the Ollama Docker Compose container, execute the following commands:
 
 ```bash
 cd ollama-docker
-docker compose -f docker-compose.yml up -d
+docker compose -f docker-compose.yml --profile gpu-nvidia up -d
 ```
 The `up -d` command starts the services in the background.
